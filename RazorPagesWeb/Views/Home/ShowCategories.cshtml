@@ -1,0 +1,7 @@
+@using Catalog
+
+<h2>Categories:</h2>
+@foreach (var category in ClassCategories.GetCategories())
+{
+    <div class="alert-dark">@category.Name</div>
+}

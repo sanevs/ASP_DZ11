@@ -1,0 +1,48 @@
+/Users/kseniagustova/RiderProjects/ASP_KW3/ASP_KW3/bin/Debug/net6.0/appsettings.Development.json
+/Users/kseniagustova/RiderProjects/ASP_KW3/ASP_KW3/bin/Debug/net6.0/appsettings.json
+/Users/kseniagustova/RiderProjects/ASP_KW3/ASP_KW3/bin/Debug/net6.0/ASP_KW3
+/Users/kseniagustova/RiderProjects/ASP_KW3/ASP_KW3/bin/Debug/net6.0/ASP_KW3.deps.json
+/Users/kseniagustova/RiderProjects/ASP_KW3/ASP_KW3/bin/Debug/net6.0/ASP_KW3.runtimeconfig.json
+/Users/kseniagustova/RiderProjects/ASP_KW3/ASP_KW3/bin/Debug/net6.0/ASP_KW3.dll
+/Users/kseniagustova/RiderProjects/ASP_KW3/ASP_KW3/bin/Debug/net6.0/ref/ASP_KW3.dll
+/Users/kseniagustova/RiderProjects/ASP_KW3/ASP_KW3/bin/Debug/net6.0/ASP_KW3.pdb
+/Users/kseniagustova/RiderProjects/ASP_KW3/ASP_KW3/obj/Debug/net6.0/ASP_KW3.csproj.AssemblyReference.cache
+/Users/kseniagustova/RiderProjects/ASP_KW3/ASP_KW3/obj/Debug/net6.0/ASP_KW3.GeneratedMSBuildEditorConfig.editorconfig
+/Users/kseniagustova/RiderProjects/ASP_KW3/ASP_KW3/obj/Debug/net6.0/ASP_KW3.AssemblyInfoInputs.cache
+/Users/kseniagustova/RiderProjects/ASP_KW3/ASP_KW3/obj/Debug/net6.0/ASP_KW3.AssemblyInfo.cs
+/Users/kseniagustova/RiderProjects/ASP_KW3/ASP_KW3/obj/Debug/net6.0/ASP_KW3.csproj.CoreCompileInputs.cache
+/Users/kseniagustova/RiderProjects/ASP_KW3/ASP_KW3/obj/Debug/net6.0/ASP_KW3.MvcApplicationPartsAssemblyInfo.cache
+/Users/kseniagustova/RiderProjects/ASP_KW3/ASP_KW3/obj/Debug/net6.0/staticwebassets.build.json
+/Users/kseniagustova/RiderProjects/ASP_KW3/ASP_KW3/obj/Debug/net6.0/staticwebassets.development.json
+/Users/kseniagustova/RiderProjects/ASP_KW3/ASP_KW3/obj/Debug/net6.0/scopedcss/bundle/ASP_KW3.styles.css
+/Users/kseniagustova/RiderProjects/ASP_KW3/ASP_KW3/obj/Debug/net6.0/ASP_KW3.dll
+/Users/kseniagustova/RiderProjects/ASP_KW3/ASP_KW3/obj/Debug/net6.0/ref/ASP_KW3.dll
+/Users/kseniagustova/RiderProjects/ASP_KW3/ASP_KW3/obj/Debug/net6.0/ASP_KW3.pdb
+/Users/kseniagustova/RiderProjects/ASP_KW3/ASP_KW3/obj/Debug/net6.0/ASP_KW3.genruntimeconfig.cache
+/Users/kseniagustova/RiderProjects/ASP_KW3/ASP_KW3/bin/Debug/net6.0/Catalog.dll
+/Users/kseniagustova/RiderProjects/ASP_KW3/ASP_KW3/bin/Debug/net6.0/Catalog.pdb
+/Users/kseniagustova/RiderProjects/ASP_KW3/ASP_KW3/obj/Debug/net6.0/ASP_KW3.csproj.CopyComplete
+D:\Mystat домашка\ASP\ASP_KW3\ASP_KW3\ASP_KW3\bin\Debug\net6.0\appsettings.Development.json
+D:\Mystat домашка\ASP\ASP_KW3\ASP_KW3\ASP_KW3\bin\Debug\net6.0\appsettings.json
+D:\Mystat домашка\ASP\ASP_KW3\ASP_KW3\ASP_KW3\bin\Debug\net6.0\ASP_KW3.exe
+D:\Mystat домашка\ASP\ASP_KW3\ASP_KW3\ASP_KW3\bin\Debug\net6.0\ASP_KW3.deps.json
+D:\Mystat домашка\ASP\ASP_KW3\ASP_KW3\ASP_KW3\bin\Debug\net6.0\ASP_KW3.runtimeconfig.json
+D:\Mystat домашка\ASP\ASP_KW3\ASP_KW3\ASP_KW3\bin\Debug\net6.0\ASP_KW3.dll
+D:\Mystat домашка\ASP\ASP_KW3\ASP_KW3\ASP_KW3\bin\Debug\net6.0\ref\ASP_KW3.dll
+D:\Mystat домашка\ASP\ASP_KW3\ASP_KW3\ASP_KW3\bin\Debug\net6.0\ASP_KW3.pdb
+D:\Mystat домашка\ASP\ASP_KW3\ASP_KW3\ASP_KW3\bin\Debug\net6.0\Catalog.dll
+D:\Mystat домашка\ASP\ASP_KW3\ASP_KW3\ASP_KW3\bin\Debug\net6.0\Catalog.pdb
+D:\Mystat домашка\ASP\ASP_KW3\ASP_KW3\ASP_KW3\obj\Debug\net6.0\ASP_KW3.csproj.AssemblyReference.cache
+D:\Mystat домашка\ASP\ASP_KW3\ASP_KW3\ASP_KW3\obj\Debug\net6.0\ASP_KW3.GeneratedMSBuildEditorConfig.editorconfig
+D:\Mystat домашка\ASP\ASP_KW3\ASP_KW3\ASP_KW3\obj\Debug\net6.0\ASP_KW3.AssemblyInfoInputs.cache
+D:\Mystat домашка\ASP\ASP_KW3\ASP_KW3\ASP_KW3\obj\Debug\net6.0\ASP_KW3.AssemblyInfo.cs
+D:\Mystat домашка\ASP\ASP_KW3\ASP_KW3\ASP_KW3\obj\Debug\net6.0\ASP_KW3.csproj.CoreCompileInputs.cache
+D:\Mystat домашка\ASP\ASP_KW3\ASP_KW3\ASP_KW3\obj\Debug\net6.0\ASP_KW3.MvcApplicationPartsAssemblyInfo.cache
+D:\Mystat домашка\ASP\ASP_KW3\ASP_KW3\ASP_KW3\obj\Debug\net6.0\staticwebassets.build.json
+D:\Mystat домашка\ASP\ASP_KW3\ASP_KW3\ASP_KW3\obj\Debug\net6.0\staticwebassets.development.json
+D:\Mystat домашка\ASP\ASP_KW3\ASP_KW3\ASP_KW3\obj\Debug\net6.0\scopedcss\bundle\ASP_KW3.styles.css
+D:\Mystat домашка\ASP\ASP_KW3\ASP_KW3\ASP_KW3\obj\Debug\net6.0\ASP_KW3.csproj.CopyComplete
+D:\Mystat домашка\ASP\ASP_KW3\ASP_KW3\ASP_KW3\obj\Debug\net6.0\ASP_KW3.dll
+D:\Mystat домашка\ASP\ASP_KW3\ASP_KW3\ASP_KW3\obj\Debug\net6.0\ref\ASP_KW3.dll
+D:\Mystat домашка\ASP\ASP_KW3\ASP_KW3\ASP_KW3\obj\Debug\net6.0\ASP_KW3.pdb
+D:\Mystat домашка\ASP\ASP_KW3\ASP_KW3\ASP_KW3\obj\Debug\net6.0\ASP_KW3.genruntimeconfig.cache

@@ -1,0 +1,30 @@
+/Users/kseniagustova/RiderProjects/ASP_KW3/ShopClient/bin/Debug/net6.0/ShopClient.deps.json
+/Users/kseniagustova/RiderProjects/ASP_KW3/ShopClient/bin/Debug/net6.0/ShopClient.dll
+/Users/kseniagustova/RiderProjects/ASP_KW3/ShopClient/bin/Debug/net6.0/ref/ShopClient.dll
+/Users/kseniagustova/RiderProjects/ASP_KW3/ShopClient/bin/Debug/net6.0/ShopClient.pdb
+/Users/kseniagustova/RiderProjects/ASP_KW3/ShopClient/bin/Debug/net6.0/Catalog.dll
+/Users/kseniagustova/RiderProjects/ASP_KW3/ShopClient/bin/Debug/net6.0/Catalog.pdb
+/Users/kseniagustova/RiderProjects/ASP_KW3/ShopClient/obj/Debug/net6.0/ShopClient.csproj.AssemblyReference.cache
+/Users/kseniagustova/RiderProjects/ASP_KW3/ShopClient/obj/Debug/net6.0/ShopClient.GeneratedMSBuildEditorConfig.editorconfig
+/Users/kseniagustova/RiderProjects/ASP_KW3/ShopClient/obj/Debug/net6.0/ShopClient.AssemblyInfoInputs.cache
+/Users/kseniagustova/RiderProjects/ASP_KW3/ShopClient/obj/Debug/net6.0/ShopClient.AssemblyInfo.cs
+/Users/kseniagustova/RiderProjects/ASP_KW3/ShopClient/obj/Debug/net6.0/ShopClient.csproj.CoreCompileInputs.cache
+/Users/kseniagustova/RiderProjects/ASP_KW3/ShopClient/obj/Debug/net6.0/ShopClient.csproj.CopyComplete
+/Users/kseniagustova/RiderProjects/ASP_KW3/ShopClient/obj/Debug/net6.0/ShopClient.dll
+/Users/kseniagustova/RiderProjects/ASP_KW3/ShopClient/obj/Debug/net6.0/ref/ShopClient.dll
+/Users/kseniagustova/RiderProjects/ASP_KW3/ShopClient/obj/Debug/net6.0/ShopClient.pdb
+D:\Mystat домашка\ASP\ASP_KW3\ASP_KW3\ShopClient\bin\Debug\net6.0\ShopClient.deps.json
+D:\Mystat домашка\ASP\ASP_KW3\ASP_KW3\ShopClient\bin\Debug\net6.0\ShopClient.dll
+D:\Mystat домашка\ASP\ASP_KW3\ASP_KW3\ShopClient\bin\Debug\net6.0\ref\ShopClient.dll
+D:\Mystat домашка\ASP\ASP_KW3\ASP_KW3\ShopClient\bin\Debug\net6.0\ShopClient.pdb
+D:\Mystat домашка\ASP\ASP_KW3\ASP_KW3\ShopClient\bin\Debug\net6.0\Catalog.dll
+D:\Mystat домашка\ASP\ASP_KW3\ASP_KW3\ShopClient\bin\Debug\net6.0\Catalog.pdb
+D:\Mystat домашка\ASP\ASP_KW3\ASP_KW3\ShopClient\obj\Debug\net6.0\ShopClient.csproj.AssemblyReference.cache
+D:\Mystat домашка\ASP\ASP_KW3\ASP_KW3\ShopClient\obj\Debug\net6.0\ShopClient.GeneratedMSBuildEditorConfig.editorconfig
+D:\Mystat домашка\ASP\ASP_KW3\ASP_KW3\ShopClient\obj\Debug\net6.0\ShopClient.AssemblyInfoInputs.cache
+D:\Mystat домашка\ASP\ASP_KW3\ASP_KW3\ShopClient\obj\Debug\net6.0\ShopClient.AssemblyInfo.cs
+D:\Mystat домашка\ASP\ASP_KW3\ASP_KW3\ShopClient\obj\Debug\net6.0\ShopClient.csproj.CoreCompileInputs.cache
+D:\Mystat домашка\ASP\ASP_KW3\ASP_KW3\ShopClient\obj\Debug\net6.0\ShopClient.csproj.CopyComplete
+D:\Mystat домашка\ASP\ASP_KW3\ASP_KW3\ShopClient\obj\Debug\net6.0\ShopClient.dll
+D:\Mystat домашка\ASP\ASP_KW3\ASP_KW3\ShopClient\obj\Debug\net6.0\ref\ShopClient.dll
+D:\Mystat домашка\ASP\ASP_KW3\ASP_KW3\ShopClient\obj\Debug\net6.0\ShopClient.pdb

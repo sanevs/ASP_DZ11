@@ -1,0 +1,52 @@
+/Users/kseniagustova/RiderProjects/ASP_KW3/ConsoleTest/bin/Debug/net6.0/ASP_KW3.deps.json
+/Users/kseniagustova/RiderProjects/ASP_KW3/ConsoleTest/bin/Debug/net6.0/ASP_KW3.runtimeconfig.json
+/Users/kseniagustova/RiderProjects/ASP_KW3/ConsoleTest/bin/Debug/net6.0/appsettings.Development.json
+/Users/kseniagustova/RiderProjects/ASP_KW3/ConsoleTest/bin/Debug/net6.0/appsettings.json
+/Users/kseniagustova/RiderProjects/ASP_KW3/ConsoleTest/bin/Debug/net6.0/ASP_KW3
+/Users/kseniagustova/RiderProjects/ASP_KW3/ConsoleTest/bin/Debug/net6.0/ConsoleTest
+/Users/kseniagustova/RiderProjects/ASP_KW3/ConsoleTest/bin/Debug/net6.0/ConsoleTest.deps.json
+/Users/kseniagustova/RiderProjects/ASP_KW3/ConsoleTest/bin/Debug/net6.0/ConsoleTest.runtimeconfig.json
+/Users/kseniagustova/RiderProjects/ASP_KW3/ConsoleTest/bin/Debug/net6.0/ConsoleTest.dll
+/Users/kseniagustova/RiderProjects/ASP_KW3/ConsoleTest/bin/Debug/net6.0/ref/ConsoleTest.dll
+/Users/kseniagustova/RiderProjects/ASP_KW3/ConsoleTest/bin/Debug/net6.0/ConsoleTest.pdb
+/Users/kseniagustova/RiderProjects/ASP_KW3/ConsoleTest/bin/Debug/net6.0/ASP_KW3.dll
+/Users/kseniagustova/RiderProjects/ASP_KW3/ConsoleTest/bin/Debug/net6.0/Catalog.dll
+/Users/kseniagustova/RiderProjects/ASP_KW3/ConsoleTest/bin/Debug/net6.0/ASP_KW3.pdb
+/Users/kseniagustova/RiderProjects/ASP_KW3/ConsoleTest/bin/Debug/net6.0/Catalog.pdb
+/Users/kseniagustova/RiderProjects/ASP_KW3/ConsoleTest/obj/Debug/net6.0/ConsoleTest.csproj.AssemblyReference.cache
+/Users/kseniagustova/RiderProjects/ASP_KW3/ConsoleTest/obj/Debug/net6.0/ConsoleTest.GeneratedMSBuildEditorConfig.editorconfig
+/Users/kseniagustova/RiderProjects/ASP_KW3/ConsoleTest/obj/Debug/net6.0/ConsoleTest.AssemblyInfoInputs.cache
+/Users/kseniagustova/RiderProjects/ASP_KW3/ConsoleTest/obj/Debug/net6.0/ConsoleTest.AssemblyInfo.cs
+/Users/kseniagustova/RiderProjects/ASP_KW3/ConsoleTest/obj/Debug/net6.0/ConsoleTest.csproj.CoreCompileInputs.cache
+/Users/kseniagustova/RiderProjects/ASP_KW3/ConsoleTest/obj/Debug/net6.0/ConsoleTest.csproj.CopyComplete
+/Users/kseniagustova/RiderProjects/ASP_KW3/ConsoleTest/obj/Debug/net6.0/ConsoleTest.dll
+/Users/kseniagustova/RiderProjects/ASP_KW3/ConsoleTest/obj/Debug/net6.0/ref/ConsoleTest.dll
+/Users/kseniagustova/RiderProjects/ASP_KW3/ConsoleTest/obj/Debug/net6.0/ConsoleTest.pdb
+/Users/kseniagustova/RiderProjects/ASP_KW3/ConsoleTest/obj/Debug/net6.0/ConsoleTest.genruntimeconfig.cache
+D:\Mystat домашка\ASP\ASP_KW3\ASP_KW3\ConsoleTest\bin\Debug\net6.0\ASP_KW3.deps.json
+D:\Mystat домашка\ASP\ASP_KW3\ASP_KW3\ConsoleTest\bin\Debug\net6.0\ASP_KW3.runtimeconfig.json
+D:\Mystat домашка\ASP\ASP_KW3\ASP_KW3\ConsoleTest\bin\Debug\net6.0\appsettings.Development.json
+D:\Mystat домашка\ASP\ASP_KW3\ASP_KW3\ConsoleTest\bin\Debug\net6.0\appsettings.json
+D:\Mystat домашка\ASP\ASP_KW3\ASP_KW3\ConsoleTest\bin\Debug\net6.0\ASP_KW3.exe
+D:\Mystat домашка\ASP\ASP_KW3\ASP_KW3\ConsoleTest\bin\Debug\net6.0\ConsoleTest.exe
+D:\Mystat домашка\ASP\ASP_KW3\ASP_KW3\ConsoleTest\bin\Debug\net6.0\ConsoleTest.deps.json
+D:\Mystat домашка\ASP\ASP_KW3\ASP_KW3\ConsoleTest\bin\Debug\net6.0\ConsoleTest.runtimeconfig.json
+D:\Mystat домашка\ASP\ASP_KW3\ASP_KW3\ConsoleTest\bin\Debug\net6.0\ConsoleTest.dll
+D:\Mystat домашка\ASP\ASP_KW3\ASP_KW3\ConsoleTest\bin\Debug\net6.0\ref\ConsoleTest.dll
+D:\Mystat домашка\ASP\ASP_KW3\ASP_KW3\ConsoleTest\bin\Debug\net6.0\ConsoleTest.pdb
+D:\Mystat домашка\ASP\ASP_KW3\ASP_KW3\ConsoleTest\bin\Debug\net6.0\ASP_KW3.dll
+D:\Mystat домашка\ASP\ASP_KW3\ASP_KW3\ConsoleTest\bin\Debug\net6.0\Catalog.dll
+D:\Mystat домашка\ASP\ASP_KW3\ASP_KW3\ConsoleTest\bin\Debug\net6.0\ShopClient.dll
+D:\Mystat домашка\ASP\ASP_KW3\ASP_KW3\ConsoleTest\bin\Debug\net6.0\ASP_KW3.pdb
+D:\Mystat домашка\ASP\ASP_KW3\ASP_KW3\ConsoleTest\bin\Debug\net6.0\ShopClient.pdb
+D:\Mystat домашка\ASP\ASP_KW3\ASP_KW3\ConsoleTest\bin\Debug\net6.0\Catalog.pdb
+D:\Mystat домашка\ASP\ASP_KW3\ASP_KW3\ConsoleTest\obj\Debug\net6.0\ConsoleTest.csproj.AssemblyReference.cache
+D:\Mystat домашка\ASP\ASP_KW3\ASP_KW3\ConsoleTest\obj\Debug\net6.0\ConsoleTest.GeneratedMSBuildEditorConfig.editorconfig
+D:\Mystat домашка\ASP\ASP_KW3\ASP_KW3\ConsoleTest\obj\Debug\net6.0\ConsoleTest.AssemblyInfoInputs.cache
+D:\Mystat домашка\ASP\ASP_KW3\ASP_KW3\ConsoleTest\obj\Debug\net6.0\ConsoleTest.AssemblyInfo.cs
+D:\Mystat домашка\ASP\ASP_KW3\ASP_KW3\ConsoleTest\obj\Debug\net6.0\ConsoleTest.csproj.CoreCompileInputs.cache
+D:\Mystat домашка\ASP\ASP_KW3\ASP_KW3\ConsoleTest\obj\Debug\net6.0\ConsoleTest.csproj.CopyComplete
+D:\Mystat домашка\ASP\ASP_KW3\ASP_KW3\ConsoleTest\obj\Debug\net6.0\ConsoleTest.dll
+D:\Mystat домашка\ASP\ASP_KW3\ASP_KW3\ConsoleTest\obj\Debug\net6.0\ref\ConsoleTest.dll
+D:\Mystat домашка\ASP\ASP_KW3\ASP_KW3\ConsoleTest\obj\Debug\net6.0\ConsoleTest.pdb
+D:\Mystat домашка\ASP\ASP_KW3\ASP_KW3\ConsoleTest\obj\Debug\net6.0\ConsoleTest.genruntimeconfig.cache

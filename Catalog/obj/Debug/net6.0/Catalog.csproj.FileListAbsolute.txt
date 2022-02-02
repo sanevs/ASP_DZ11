@@ -1,0 +1,24 @@
+/Users/kseniagustova/RiderProjects/ASP_KW3/Catalog/bin/Debug/net6.0/Catalog.deps.json
+/Users/kseniagustova/RiderProjects/ASP_KW3/Catalog/bin/Debug/net6.0/Catalog.dll
+/Users/kseniagustova/RiderProjects/ASP_KW3/Catalog/bin/Debug/net6.0/ref/Catalog.dll
+/Users/kseniagustova/RiderProjects/ASP_KW3/Catalog/bin/Debug/net6.0/Catalog.pdb
+/Users/kseniagustova/RiderProjects/ASP_KW3/Catalog/obj/Debug/net6.0/Catalog.csproj.AssemblyReference.cache
+/Users/kseniagustova/RiderProjects/ASP_KW3/Catalog/obj/Debug/net6.0/Catalog.GeneratedMSBuildEditorConfig.editorconfig
+/Users/kseniagustova/RiderProjects/ASP_KW3/Catalog/obj/Debug/net6.0/Catalog.AssemblyInfoInputs.cache
+/Users/kseniagustova/RiderProjects/ASP_KW3/Catalog/obj/Debug/net6.0/Catalog.AssemblyInfo.cs
+/Users/kseniagustova/RiderProjects/ASP_KW3/Catalog/obj/Debug/net6.0/Catalog.csproj.CoreCompileInputs.cache
+/Users/kseniagustova/RiderProjects/ASP_KW3/Catalog/obj/Debug/net6.0/Catalog.dll
+/Users/kseniagustova/RiderProjects/ASP_KW3/Catalog/obj/Debug/net6.0/ref/Catalog.dll
+/Users/kseniagustova/RiderProjects/ASP_KW3/Catalog/obj/Debug/net6.0/Catalog.pdb
+D:\Mystat домашка\ASP\ASP_KW3\ASP_KW3\Catalog\bin\Debug\net6.0\Catalog.deps.json
+D:\Mystat домашка\ASP\ASP_KW3\ASP_KW3\Catalog\bin\Debug\net6.0\Catalog.dll
+D:\Mystat домашка\ASP\ASP_KW3\ASP_KW3\Catalog\bin\Debug\net6.0\ref\Catalog.dll
+D:\Mystat домашка\ASP\ASP_KW3\ASP_KW3\Catalog\bin\Debug\net6.0\Catalog.pdb
+D:\Mystat домашка\ASP\ASP_KW3\ASP_KW3\Catalog\obj\Debug\net6.0\Catalog.csproj.AssemblyReference.cache
+D:\Mystat домашка\ASP\ASP_KW3\ASP_KW3\Catalog\obj\Debug\net6.0\Catalog.GeneratedMSBuildEditorConfig.editorconfig
+D:\Mystat домашка\ASP\ASP_KW3\ASP_KW3\Catalog\obj\Debug\net6.0\Catalog.AssemblyInfoInputs.cache
+D:\Mystat домашка\ASP\ASP_KW3\ASP_KW3\Catalog\obj\Debug\net6.0\Catalog.AssemblyInfo.cs
+D:\Mystat домашка\ASP\ASP_KW3\ASP_KW3\Catalog\obj\Debug\net6.0\Catalog.csproj.CoreCompileInputs.cache
+D:\Mystat домашка\ASP\ASP_KW3\ASP_KW3\Catalog\obj\Debug\net6.0\Catalog.dll
+D:\Mystat домашка\ASP\ASP_KW3\ASP_KW3\Catalog\obj\Debug\net6.0\ref\Catalog.dll
+D:\Mystat домашка\ASP\ASP_KW3\ASP_KW3\Catalog\obj\Debug\net6.0\Catalog.pdb

@@ -1,0 +1,16 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "6ba5cc1e-51dc-4e05-94e8-489e59c9adde": {
+      "ProjectGuid": "6ba5cc1e-51dc-4e05-94e8-489e59c9adde",
+      "DisplayName": "ASP_KW3",
+      "ColorIndex": 0
+    },
+    "8db3509c-3d56-4d2a-8bb4-a9900bb92553": {
+      "ProjectGuid": "8db3509c-3d56-4d2a-8bb4-a9900bb92553",
+      "DisplayName": "ConsoleTest",
+      "ColorIndex": 1
+    }
+  },
+  "NextColorIndex": 2
+}
