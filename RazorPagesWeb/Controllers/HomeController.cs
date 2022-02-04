@@ -3,17 +3,21 @@ using Catalog;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using RazorPagesWeb.Models;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace RazorPagesWeb.Controllers;
 
 public class HomeController : Controller
 {
     private readonly ILogger<HomeController> _logger;
-    private static ClassCatalog Catalog { get; set; } = new ClassCatalog();
+    private readonly ICatalog _catalog;
 
-    public HomeController(ILogger<HomeController> logger)
+    //private static ClassCatalog ClassCatalog { get; set; } = new ClassCatalog();
+
+    public HomeController(ILogger<HomeController> logger, ICatalog catalog)
     {
         _logger = logger;
+        _catalog = catalog;
     }
 
     public IActionResult Index()
@@ -27,7 +31,7 @@ public class HomeController : Controller
     }
     public IActionResult ShowCategories()
     {
-        return View();
+        return View(_catalog.Categories.GetCategories());
     }
     public IActionResult AddProduct(string name, int price, string category)
     {
@@ -36,21 +40,21 @@ public class HomeController : Controller
         {
             if (name is null)
                 return View("Error");
-            Catalog.AddProduct(new Product(
+            _catalog.AddProduct(new Product(
                 name, 
                 price, 
-                ClassCategories.GetCategories().First(cat => cat.Name == category)
+                _catalog.Categories.GetCategories().First(cat => cat.Name == category)
                 ));
         }
         
-        return View(ClassCategories.GetCategories().ToList());
+        return View(_catalog.Categories.GetCategories().ToList());
     }
 
     public IActionResult AddCategory(string name)
     {
         if (HttpContext.Request.Method == "POST" && !(name is null))
         {
-            ClassCategories.AddCategory(name);
+            _catalog.Categories.AddCategory(name); 
         }
 
         return View();
@@ -58,7 +62,7 @@ public class HomeController : Controller
     
     public IActionResult ShowProducts(string category = "default")
     {
-        var catalog = Catalog
+        var catalog = _catalog
             .GetProducts(DateTime.Now.DayOfWeek, "Windows")
             .ToList();
         if (category == "default")

@@ -6,6 +6,10 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
 
 var builder = WebApplication.CreateBuilder(args);
+
+//dz 6.1
+builder.Services.AddSingleton<ICurrentTime, UTC_Time>();
+//
 var app = builder.Build();
 
 var catalog = new ClassCatalog();
@@ -23,4 +27,9 @@ app.MapGet("/add/{name}/{price}/{categoryId}",(string name, int price, int categ
     AddProduct(name, price, categoryId));
 
 app.MapGet("/userinfo", (HttpContext context) => context.Request.Headers.UserAgent);
+
+//dz 6.2
+var currentTime = app.Services.GetService<ICurrentTime>();
+app.MapGet("/utc", () => $"UTC time is {currentTime.GetTime()}");
+//
 app.Run();

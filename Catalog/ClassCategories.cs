@@ -12,6 +12,6 @@ public static class ClassCategories
     };
     public static ConcurrentBag<Category> GetCategories() => _categories;
     public static void AddCategory(string name) => _categories.Add(new Category(GetMaxId() + 1, name));
-    public static int GetMinId() => GetCategories().Select(c => c.Id).Min();
-    public static int GetMaxId() => GetCategories().Select(c => c.Id).Max();
+    //public int GetMinId() => GetCategories().Select(c => c.Id).Min();
+    private static int GetMaxId() => GetCategories().Select(c => c.Id).Max();
 }

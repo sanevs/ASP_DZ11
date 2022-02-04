@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace Catalog;
 
-public class ClassCatalog
+public class ClassCatalog : ICatalog
 {
     private readonly ConcurrentBag<Product> _products = new()
     {
@@ -14,6 +14,8 @@ public class ClassCatalog
         new Product("Watches", 2800, ClassCategories.GetCategories().First(c => c.Id == 1)),
     };
 
+
+    public Categories Categories { get; }
 
     public ConcurrentBag<Product> GetProducts(DayOfWeek dayOfWeek, string userAgent)
     {
@@ -39,6 +41,6 @@ public class ClassCatalog
 
         return _products;
     }
-
+    
     public void AddProduct(Product product) => _products.Add(product);
 }
