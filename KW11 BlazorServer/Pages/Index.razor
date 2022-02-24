@@ -1,0 +1,21 @@
+@page "/"
+
+<PageTitle>Index</PageTitle>
+
+<h1>Добро пожаловать в наш интернет магазин Glory</h1>
+
+Welcome to your new app.
+<br/>
+Current time is @_time
+<SurveyPrompt Title="How is Blazor working for you?"/>
+
+@code
+{
+    private TimeOnly _time;
+
+    protected override void OnInitialized()
+    {
+        base.OnInitialized();
+        _time = TimeOnly.FromDateTime(DateTime.Now);
+    }
+}

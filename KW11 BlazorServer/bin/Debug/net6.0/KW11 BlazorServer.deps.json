@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "KW11 BlazorServer/1.0.0": {
+        "dependencies": {
+          "Catalog": "1.0.0"
+        },
+        "runtime": {
+          "KW11 BlazorServer.dll": {}
+        }
+      },
+      "Catalog/1.0.0": {
+        "runtime": {
+          "Catalog.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "KW11 BlazorServer/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Catalog/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

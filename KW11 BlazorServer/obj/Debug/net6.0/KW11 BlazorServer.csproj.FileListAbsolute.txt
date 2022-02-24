@@ -1,0 +1,30 @@
+D:\Mystat домашка\ASP\ASP_KW3\ASP_KW3\KW11 BlazorServer\bin\Debug\net6.0\appsettings.Development.json
+D:\Mystat домашка\ASP\ASP_KW3\ASP_KW3\KW11 BlazorServer\bin\Debug\net6.0\appsettings.json
+D:\Mystat домашка\ASP\ASP_KW3\ASP_KW3\KW11 BlazorServer\bin\Debug\net6.0\KW11 BlazorServer.staticwebassets.runtime.json
+D:\Mystat домашка\ASP\ASP_KW3\ASP_KW3\KW11 BlazorServer\bin\Debug\net6.0\KW11 BlazorServer.exe
+D:\Mystat домашка\ASP\ASP_KW3\ASP_KW3\KW11 BlazorServer\bin\Debug\net6.0\KW11 BlazorServer.deps.json
+D:\Mystat домашка\ASP\ASP_KW3\ASP_KW3\KW11 BlazorServer\bin\Debug\net6.0\KW11 BlazorServer.runtimeconfig.json
+D:\Mystat домашка\ASP\ASP_KW3\ASP_KW3\KW11 BlazorServer\bin\Debug\net6.0\KW11 BlazorServer.dll
+D:\Mystat домашка\ASP\ASP_KW3\ASP_KW3\KW11 BlazorServer\bin\Debug\net6.0\ref\KW11 BlazorServer.dll
+D:\Mystat домашка\ASP\ASP_KW3\ASP_KW3\KW11 BlazorServer\bin\Debug\net6.0\KW11 BlazorServer.pdb
+D:\Mystat домашка\ASP\ASP_KW3\ASP_KW3\KW11 BlazorServer\obj\Debug\net6.0\KW11 BlazorServer.csproj.AssemblyReference.cache
+D:\Mystat домашка\ASP\ASP_KW3\ASP_KW3\KW11 BlazorServer\obj\Debug\net6.0\KW11 BlazorServer.GeneratedMSBuildEditorConfig.editorconfig
+D:\Mystat домашка\ASP\ASP_KW3\ASP_KW3\KW11 BlazorServer\obj\Debug\net6.0\KW11 BlazorServer.AssemblyInfoInputs.cache
+D:\Mystat домашка\ASP\ASP_KW3\ASP_KW3\KW11 BlazorServer\obj\Debug\net6.0\KW11 BlazorServer.AssemblyInfo.cs
+D:\Mystat домашка\ASP\ASP_KW3\ASP_KW3\KW11 BlazorServer\obj\Debug\net6.0\KW11 BlazorServer.csproj.CoreCompileInputs.cache
+D:\Mystat домашка\ASP\ASP_KW3\ASP_KW3\KW11 BlazorServer\obj\Debug\net6.0\KW11 BlazorServer.MvcApplicationPartsAssemblyInfo.cache
+D:\Mystat домашка\ASP\ASP_KW3\ASP_KW3\KW11 BlazorServer\obj\Debug\net6.0\KW11 BlazorServer.RazorAssemblyInfo.cache
+D:\Mystat домашка\ASP\ASP_KW3\ASP_KW3\KW11 BlazorServer\obj\Debug\net6.0\KW11 BlazorServer.RazorAssemblyInfo.cs
+D:\Mystat домашка\ASP\ASP_KW3\ASP_KW3\KW11 BlazorServer\obj\Debug\net6.0\staticwebassets.build.json
+D:\Mystat домашка\ASP\ASP_KW3\ASP_KW3\KW11 BlazorServer\obj\Debug\net6.0\staticwebassets.development.json
+D:\Mystat домашка\ASP\ASP_KW3\ASP_KW3\KW11 BlazorServer\obj\Debug\net6.0\scopedcss\Shared\MainLayout.razor.rz.scp.css
+D:\Mystat домашка\ASP\ASP_KW3\ASP_KW3\KW11 BlazorServer\obj\Debug\net6.0\scopedcss\Shared\NavMenu.razor.rz.scp.css
+D:\Mystat домашка\ASP\ASP_KW3\ASP_KW3\KW11 BlazorServer\obj\Debug\net6.0\scopedcss\bundle\KW11 BlazorServer.styles.css
+D:\Mystat домашка\ASP\ASP_KW3\ASP_KW3\KW11 BlazorServer\obj\Debug\net6.0\scopedcss\projectbundle\KW11 BlazorServer.bundle.scp.css
+D:\Mystat домашка\ASP\ASP_KW3\ASP_KW3\KW11 BlazorServer\obj\Debug\net6.0\KW11 BlazorServer.dll
+D:\Mystat домашка\ASP\ASP_KW3\ASP_KW3\KW11 BlazorServer\obj\Debug\net6.0\ref\KW11 BlazorServer.dll
+D:\Mystat домашка\ASP\ASP_KW3\ASP_KW3\KW11 BlazorServer\obj\Debug\net6.0\KW11 BlazorServer.pdb
+D:\Mystat домашка\ASP\ASP_KW3\ASP_KW3\KW11 BlazorServer\obj\Debug\net6.0\KW11 BlazorServer.genruntimeconfig.cache
+D:\Mystat домашка\ASP\ASP_KW3\ASP_KW3\KW11 BlazorServer\bin\Debug\net6.0\Catalog.dll
+D:\Mystat домашка\ASP\ASP_KW3\ASP_KW3\KW11 BlazorServer\bin\Debug\net6.0\Catalog.pdb
+D:\Mystat домашка\ASP\ASP_KW3\ASP_KW3\KW11 BlazorServer\obj\Debug\net6.0\KW11 BlazorServer.csproj.CopyComplete

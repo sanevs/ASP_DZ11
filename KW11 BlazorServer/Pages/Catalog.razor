@@ -1,0 +1,29 @@
+@page "/catalog"
+
+@using global::Catalog
+@using KW11_BlazorServer.Data
+@inject ICatalog _myCatalog;
+
+<h3>Catalog</h3>
+@foreach(var prod in @_myCatalog.GetProducts(DateTime.Now.DayOfWeek, "Windows"))
+    {
+        <p>
+            @prod.Name, стоимостью @prod.Price $, из категории @prod.Category.Name
+            <img src="@prod.ImageRef" width="50" height="50"/>
+            <NavLink href="product">Просмотр товара</NavLink>
+            <button class="btn btn-outline-success" @onclick="() => AddToCart(prod)">Добавить в корзину</button>
+        </p>
+    }
+@code 
+{
+   protected override void OnInitialized()
+    {
+        base.OnInitialized();
+        _myCatalog = new ClassCatalog();
+    }
+
+    private void AddToCart(Product product)
+    {
+        ProductsCart.Cart.Add(product);
+    }
+}
