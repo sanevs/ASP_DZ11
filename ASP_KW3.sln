@@ -10,6 +10,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShopClient", "ShopClient\Sh
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RazorPagesWeb", "RazorPagesWeb\RazorPagesWeb.csproj", "{404CF364-C939-4C2B-B31E-74FA108EED4C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KW11 BlazorServer", "KW11 BlazorServer\KW11 BlazorServer.csproj", "{C0D8C3A5-F4D5-498F-AD28-24BE9901BBCD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -36,5 +38,9 @@ Global
 		{404CF364-C939-4C2B-B31E-74FA108EED4C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{404CF364-C939-4C2B-B31E-74FA108EED4C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{404CF364-C939-4C2B-B31E-74FA108EED4C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C0D8C3A5-F4D5-498F-AD28-24BE9901BBCD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C0D8C3A5-F4D5-498F-AD28-24BE9901BBCD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C0D8C3A5-F4D5-498F-AD28-24BE9901BBCD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C0D8C3A5-F4D5-498F-AD28-24BE9901BBCD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
