@@ -1,6 +1,7 @@
 using System.Collections.Concurrent;
+using System.Net.Http.Headers;
 
-namespace Catalog;
+namespace Glory.Domain;
 
 public class Catalog : ICatalog
 {
@@ -21,28 +22,35 @@ public class Catalog : ICatalog
 
     public ConcurrentBag<Product> GetProducts(DayOfWeek dayOfWeek, string userAgent)
     {
+        var products = new List<Product>(_products.Count);
+        foreach (var p in _products)
+        {
+            products.Add((Product)p.Clone());
+        }
+
         if (dayOfWeek == DayOfWeek.Friday || userAgent.ToLower().Contains("iphone"))
-            lock (_products)
+            lock (products)
             {
-                return new ConcurrentBag<Product>(_products.Select(p =>
+                return new ConcurrentBag<Product>(products.Select(p =>
                 {
-                    p.Price += p.Price / 2;
+                    p.Price = p.Price * 3 / 2;
                     return p;
-                }));
+                }).ToList());
             }
 
         if(userAgent.ToLower().Contains("android"))
-            lock (_products)
+            lock (products)
             {
-                return new ConcurrentBag<Product>(_products.Select(p =>
+                return new ConcurrentBag<Product>(products.Select(p =>
                 {
                     p.Price -= p.Price / 10;
                     return p;
-                }));
+                }).ToList());
             }
 
-        return _products;
+        return new ConcurrentBag<Product>(products);
     }
     
     public void AddProduct(Product product) => _products.Add(product);
+    public Product GetProduct(string name) => _products.FirstOrDefault(p => p.Name == name);
 }

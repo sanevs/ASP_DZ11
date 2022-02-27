@@ -1,4 +1,4 @@
-using Catalog;
+using Glory.Domain;
 
 namespace KW11_BlazorServer.Data;
 

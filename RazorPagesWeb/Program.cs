@@ -1,4 +1,4 @@
-using Catalog;
+using Glory.Domain;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -8,7 +8,7 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 //DIP
-builder.Services.AddSingleton<ICatalog, Catalog.Catalog>();
+builder.Services.AddSingleton<ICatalog, Glory.Domain.Catalog>();
 
 var app = builder.Build();
 

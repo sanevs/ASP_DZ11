@@ -1,6 +1,6 @@
 @page "/CartPage"
 @using KW11_BlazorServer.Data
-@using global::Catalog
+@using global::Glory.Domain
 <h3>Cart</h3>
 <p>Кол-во продуктов в корзине: @ProductsCart.Cart.Count</p>
 @foreach(var prod in @ProductsCart.Cart)

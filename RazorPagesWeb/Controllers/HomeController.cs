@@ -1,5 +1,5 @@
 ﻿using System.Diagnostics;
-using Catalog;
+using Glory.Domain;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using RazorPagesWeb.Models;

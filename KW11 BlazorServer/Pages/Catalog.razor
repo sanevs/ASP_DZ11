@@ -1,27 +1,21 @@
 @page "/catalog"
 
-@using global::Catalog
+@using global::Glory.Domain
 @using KW11_BlazorServer.Data
 @inject ICatalog _myCatalog;
 
 <h3>Catalog</h3>
-@foreach(var prod in @_myCatalog.GetProducts(DateTime.Now.DayOfWeek, "Windows"))
+@foreach(var product in @_myCatalog.GetProducts(DayOfWeek.Friday, "Windows"))
     {
         <p>
-            @prod.Name, стоимостью @prod.Price $, из категории @prod.Category.Name
-            <img src="@prod.ImageRef" width="50" height="50"/>
+            @product.Name, стоимостью @product.Price $, из категории @product.Category.Name
+            <img src="@product.ImageRef" width="50" height="50"/>
             <NavLink href="product">Просмотр товара</NavLink>
-            <button class="btn btn-outline-success" @onclick="() => AddToCart(prod)">Добавить в корзину</button>
+            <button class="btn btn-outline-success" @onclick="() => AddToCart(product)">Добавить в корзину</button>
         </p>
     }
 @code 
 {
-   protected override void OnInitialized()
-    {
-        base.OnInitialized();
-        _myCatalog = new ClassCatalog();
-    }
-
     private void AddToCart(Product product)
     {
         ProductsCart.Cart.Add(product);

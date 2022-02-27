@@ -1,4 +1,4 @@
-namespace Catalog;
+namespace Glory.Domain;
 
 public class Category
 {

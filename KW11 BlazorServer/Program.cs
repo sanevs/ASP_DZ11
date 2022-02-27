@@ -1,4 +1,4 @@
-using Catalog;
+using Glory.Domain;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Web;
 using KW11_BlazorServer.Data;
@@ -9,7 +9,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
 builder.Services.AddSingleton<WeatherForecastService>();
-builder.Services.AddSingleton<ICatalog, ClassCatalog>();
+builder.Services.AddSingleton<ICatalog, Glory.Domain.Catalog>();
 
 var app = builder.Build();
 

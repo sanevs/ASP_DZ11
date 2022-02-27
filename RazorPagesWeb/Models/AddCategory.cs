@@ -1,6 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
-using Catalog;
+using Glory.Domain;
 
 namespace RazorPagesWeb.Models;
 

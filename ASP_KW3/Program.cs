@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Concurrent;
 using System.Linq;
-using Catalog;
+using Glory.Domain;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
 

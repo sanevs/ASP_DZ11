@@ -2,7 +2,7 @@
 using System.Collections.Concurrent;
 using System.Linq;
 
-namespace Catalog;
+namespace Glory.Domain;
 
 public class ClassCatalog : ICatalog
 {
@@ -43,4 +43,5 @@ public class ClassCatalog : ICatalog
     }
     
     public void AddProduct(Product product) => _products.Add(product);
+    public Product GetProduct(string name) => _products.FirstOrDefault(p => p.Name == name);
 }

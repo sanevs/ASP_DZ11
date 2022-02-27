@@ -1,6 +1,6 @@
 using System.Collections.Concurrent;
 
-namespace Catalog;
+namespace Glory.Domain;
 
 public class Categories
 {
