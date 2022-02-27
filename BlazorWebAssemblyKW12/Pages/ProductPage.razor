@@ -1,0 +1,11 @@
+@page "/ProductPage/{Name}"
+@using Glory.Domain
+@inject ICatalog _catalog;
+
+<h3>Product</h3>
+<ProductComponent Product="_catalog.GetProduct(Name)"></ProductComponent>
+
+@code {
+    [Parameter]
+    public string Name { get; set; }
+}

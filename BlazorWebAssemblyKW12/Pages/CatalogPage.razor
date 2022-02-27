@@ -1,0 +1,28 @@
+@page "/CatalogPage"
+
+@using BlazorWebAssemblyKW12.Data
+@using Glory.Domain
+
+@inject ICatalog _myCatalog;
+@inject ICart _cart;
+
+<h3>
+    Catalog
+    <NavLink class="nav-link"
+             href="addProductPage">+</NavLink>
+</h3>
+
+@foreach (Product prod in @_myCatalog.GetProducts(DateTime.Now.DayOfWeek, "Windows"))
+{
+    <p>
+        <ProductComponent Product="prod"/>
+        @{ _ref = "productpage/" + prod.Name; }
+        <NavLink href=@_ref>Просмотр товара</NavLink>
+        <button class="btn btn-outline-success" @onclick="() => _cart.AddProduct(prod)">Добавить в корзину</button>
+    </p>
+}
+
+@code
+{
+    private string _ref;
+}

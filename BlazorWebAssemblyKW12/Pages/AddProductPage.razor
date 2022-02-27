@@ -1,0 +1,49 @@
+@page "/AddProductPage"
+@using System.ComponentModel.DataAnnotations
+@using Glory.Domain
+
+@inject Categories _categories;
+@inject ICatalog _myCatalog;
+
+<h3>Добавление продукта:</h3>
+<EditForm Model="_addFormModel" OnValidSubmit="AddValidProduct">
+    <DataAnnotationsValidator/>
+    <ValidationSummary/>
+    
+    Название товара: <InputText @bind-Value="_addFormModel.Name"></InputText><br/>
+    Цена: <InputNumber @bind-Value="_addFormModel.Price"></InputNumber><br/>
+    Категория: <InputSelect @bind-Value="_addFormModel.CategoryId">
+        @foreach (var category in _categories.GetCategories())
+        {
+            <option value="@category.Id">@category.Name</option>
+        }
+    </InputSelect><br/>
+    <input type="submit" value="Добавить"/>
+</EditForm>
+
+@code {
+    private AddForm _addFormModel = new();
+    
+    private class AddForm
+    {
+        [Required]
+        public string Name { get; set; }
+
+        [Required]
+        public int Price { get; set; } = 100;
+
+        [Required]
+        public int CategoryId { get; set; } = 1;
+    }
+
+    private void AddValidProduct()
+    {
+        _myCatalog.AddProduct(
+            new Product(
+                _addFormModel.Name, 
+                _addFormModel.Price, 
+                _categories
+                    .GetCategories()
+                    .First(c => c.Id == _addFormModel.CategoryId)));
+    }
+}
