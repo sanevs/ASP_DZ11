@@ -2,7 +2,6 @@
 
 @using BlazorWebAssemblyKW12.Data
 @using Glory.Domain
-@using System.Net.Http.Headers
 
 @inject ICatalog _myCatalog;
 @inject ICart _cart;
@@ -11,8 +10,8 @@
 
 <h3>
     Catalog
-    <NavLink class="nav-link"
-             href="addProductPage">+</NavLink>
+    @* <NavLink class="nav-link" *@
+    @*          href="addProductPage">+</NavLink> *@
 </h3>
 
 @* @foreach (Product prod in @_myCatalog.GetProducts(DateTime.Now.DayOfWeek, "Windows")) *@
@@ -32,18 +31,7 @@
     </p>
 }
 
-
 @code
 {
     private string _ref;
-    private IList<ProductDTO> ProductDtos;
-
-    protected override async Task OnInitializedAsync()
-    {
-        //ProductDtos = await _client.GetFromJsonAsync<IList<ProductDTO>>("https://localhost:7001/products");
-        //return base.OnInitializedAsync();
-        //_client.DefaultRequestHeaders.Add("Access-Control-Allow-Origin", "http://localhost:5194");
-        //var d = await _client.GetFromJsonAsync<IList<ProductDTO>>("http://localhost:5194/products");
-        //var s = await _client.GetStringAsync("http://localhost:5194/p2");
-    }
 }
