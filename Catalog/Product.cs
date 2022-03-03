@@ -7,7 +7,7 @@ public class Product : ICloneable
 {
     public string Name { get; }
     public int Price { get; set; }
-    public Category Category { get; }
+    public Category Category { get; set; }
     public string? ImageRef { get; set; }
 
 

@@ -9,11 +9,12 @@
   },
   "profiles": {
     "BlazorWebAssemblyKW12": {
-      "commandName": "Project",
+      "commandName": "Project", 
       "dotnetRunMessages": true,
       "launchBrowser": true,
       "inspectUri": "{wsProtocol}://{url.hostname}:{url.port}/_framework/debug/ws-proxy?browser={browserInspectUri}",
       "applicationUrl": "https://localhost:7252;http://localhost:5252",
+      "launchUrl": "http://localhost:5252",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }

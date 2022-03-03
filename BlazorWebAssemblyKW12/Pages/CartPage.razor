@@ -5,16 +5,16 @@
 <h3>Cart</h3>
 <p>Кол-во продуктов в корзине: @_cart.GetCount()</p>
 <button class="btn-danger" @onclick="() => _cart.Clear()">Очистить</button>
-@foreach (var kvProduct in _cart.GetCartProducts())
-{
-    <p>
-        <ProductComponent Product="kvProduct.Key"/>
-        @{ _ref = "productpage/" + kvProduct.Key.Name; }
-        <NavLink href=@_ref>Просмотр товара</NavLink>
-        <p>Кол-во: @kvProduct.Value</p>
-        <button class="btn-danger" @onclick="() => _cart.DeleteProduct(kvProduct.Key)">Удалить</button>
-    </p>
-}
+@* @foreach (var kvProduct in _cart.GetCartProducts()) *@
+@* { *@
+@*     <p> *@
+@*         <ProductComponent Product="kvProduct.Key"/> *@
+@*         @{ _ref = "productpage/" + kvProduct.Key.Name; } *@
+@*         <NavLink href=@_ref>Просмотр товара</NavLink> *@
+@*         <p>Кол-во: @kvProduct.Value</p> *@
+@*         <button class="btn-danger" @onclick="() => _cart.DeleteProduct(kvProduct.Key)">Удалить</button> *@
+@*     </p> *@
+@* } *@
 @code {
     private string _ref;
 }

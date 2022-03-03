@@ -11,6 +11,13 @@ builder.Services.AddServerSideBlazor();
 builder.Services.AddSingleton<WeatherForecastService>();
 builder.Services.AddSingleton<ICatalog, Glory.Domain.Catalog>();
 
+//builder.Services.AddSingleton<HttpClient>();
+builder.Services.AddSingleton<IList<ProductDTO>, List<ProductDTO>>( (s) =>
+{
+    var client = new HttpClient();
+    return client.GetFromJsonAsync<List<ProductDTO>>("http://localhost:5194/products").Result;
+});
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

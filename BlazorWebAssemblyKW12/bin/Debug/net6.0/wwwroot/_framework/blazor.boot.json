@@ -13,6 +13,10 @@
       "Microsoft.AspNetCore.Components.Web.dll": "sha256-aq+IFhf0HZZKVz6P\/GhuaY0UvXsguM0h5hlYrzAfugk=",
       "Microsoft.AspNetCore.Components.WebAssembly.dll": "sha256-zARafz0vNUQ9qVFCoQO3oQSP+VMitM2+PZs+2OkxMgE=",
       "Microsoft.AspNetCore.Metadata.dll": "sha256-hXAd66KKDdPFPpv7aqk5iax9UhTcBUufrs8eHMuWft8=",
+      "Microsoft.EntityFrameworkCore.dll": "sha256-rkoXgOiwTfY\/9CgBvo+m8brwmC9n9Arip9PyRMtbwtI=",
+      "Microsoft.EntityFrameworkCore.Abstractions.dll": "sha256-bPYRpYponDxgZr4SKvFc+8S7e4I4VO2FR0TcrRWp2tM=",
+      "Microsoft.Extensions.Caching.Abstractions.dll": "sha256-WLcZIKlgct2nj4hpaBvZXfHorQG9DH9B\/FZ2IKePG2I=",
+      "Microsoft.Extensions.Caching.Memory.dll": "sha256-aOJetx2rPupAGsXg2NCRL5p+\/xdzMyUSbmn24txWfQw=",
       "Microsoft.Extensions.Configuration.dll": "sha256-c8yYhfrOBLEnOBglLTu9peXSbJDwFpuT4UQiXSv28Og=",
       "Microsoft.Extensions.Configuration.Abstractions.dll": "sha256-5Otet+KKVUjNkE\/hqcNWmt75H1K2VNuKPFagpRd6Ces=",
       "Microsoft.Extensions.Configuration.Binder.dll": "sha256-wNKhG3Ovx8jqxbscz2AALlsTLfI6GL2dyDhe63mSsoM=",
@@ -196,15 +200,15 @@
       "mscorlib.dll": "sha256-+5VU+MYaTQMTlRe9QKobEjWZWv6I9teAGdNndWSBqWE=",
       "netstandard.dll": "sha256-E5RFhGIaDH5QM6BEbFUuHU8U9wP6N6jbo5MCttzLOCM=",
       "System.Private.CoreLib.dll": "sha256-9NtEbYixyog7vUmeYXyyqzfBXUYl8wxoVQ26Ji7sNRg=",
-      "Catalog.dll": "sha256-lX0quxvZYV0tQ+tjClqf5c\/8LyURkdMR0+bHyx+P0WQ=",
-      "BlazorWebAssemblyKW12.dll": "sha256-Agk00Moy9GKcXVyvqvHvryPi6mG7dET8vD0GW904gRs="
+      "Catalog.dll": "sha256-\/lRdAmaRVWCxAW+kaiw39bMH35M7qKa0MTuzzrXZHWQ=",
+      "BlazorWebAssemblyKW12.dll": "sha256-YZzSR7vmfqb6FyBLYDvsouxD0ZtmFeWmrYOxcpMHpls="
     },
     "extensions": null,
     "lazyAssembly": null,
     "libraryInitializers": null,
     "pdb": {
-      "Catalog.pdb": "sha256-wBErI\/nt4w83UsCDu7qnRcgpqEY2ZYEq9RHhO5X4WYI=",
-      "BlazorWebAssemblyKW12.pdb": "sha256-vRmo3A52+WUHLccxOmx7MmoElZWppj5NHMRukB3Tw6c="
+      "Catalog.pdb": "sha256-5XYMfaJUDY60f4DMxo6DzxLIGpInshWhR98\/UwVTsjs=",
+      "BlazorWebAssemblyKW12.pdb": "sha256-yibFo+Lj\/aoLv1vWxSV+pOHn3R1XJ7oROnj7R8dmvtU="
     },
     "runtime": {
       "dotnet.6.0.1.9ycgj9dnv4.js": "sha256-awQsJ\/WxYhouHPuE+i3eJqjA4XClQlr2rD6nKvW80ww=",

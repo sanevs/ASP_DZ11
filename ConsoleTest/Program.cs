@@ -2,6 +2,8 @@
 
 using System;
 using System.Net.Http;
+using System.Net.Http.Json;
+using Glory.Domain;
 using ShopClient;
 
 HttpClient client = new HttpClient();
@@ -27,3 +29,4 @@ myClient.Print(productsAfterAdd);
 //Print products
 //var res2 = await client.GetStringAsync(uri);
 //Console.WriteLine(res2);
+

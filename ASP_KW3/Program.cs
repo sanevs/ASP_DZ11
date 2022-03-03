@@ -4,12 +4,14 @@ using System.Linq;
 using Glory.Domain;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
 
 var builder = WebApplication.CreateBuilder(args);
 
 //dz 6.1
 builder.Services.AddSingleton<ICurrentTime, UTC_Time>();
 //
+builder.Services.AddSingleton<HttpClient>();
 var app = builder.Build();
 
 var catalog = new ClassCatalog();
@@ -32,4 +34,6 @@ app.MapGet("/userinfo", (HttpContext context) => context.Request.Headers.UserAge
 var currentTime = app.Services.GetService<ICurrentTime>();
 app.MapGet("/utc", () => $"UTC time is {currentTime.GetTime()}");
 //
+
+app.MapGet("/p2", ([FromServices] HttpClient client) => client.GetStringAsync("http://localhost:5194/p2"));
 app.Run();

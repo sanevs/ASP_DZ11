@@ -13,7 +13,7 @@ Current time is @_time
 {
     private TimeOnly _time;
 
-    protected override void OnInitialized()
+    protected override async void OnInitialized()
     {
         base.OnInitialized();
         _time = TimeOnly.FromDateTime(DateTime.Now);

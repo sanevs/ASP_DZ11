@@ -3,17 +3,27 @@
 @using global::Glory.Domain
 @using KW11_BlazorServer.Data
 @inject ICatalog _myCatalog;
+@* @inject HttpClient _client; *@
+@inject IList<ProductDTO> _products;
 
 <h3>Catalog</h3>
-@foreach(var product in @_myCatalog.GetProducts(DayOfWeek.Friday, "Windows"))
-    {
-        <p>
-            @product.Name, стоимостью @product.Price $, из категории @product.Category.Name
-            <img src="@product.ImageRef" width="50" height="50"/>
-            <NavLink href="product">Просмотр товара</NavLink>
-            <button class="btn btn-outline-success" @onclick="() => AddToCart(product)">Добавить в корзину</button>
-        </p>
-    }
+
+@* @foreach(var product in @_myCatalog.GetProducts(DayOfWeek.Friday, "Windows")) *@
+@*     { *@
+@*         <p> *@
+@*             @product.Name, стоимостью @product.Price $, из категории @product.Category.Name *@
+@*             <img src="@product.ImageRef" width="50" height="50"/> *@
+@*             <NavLink href="product">Просмотр товара</NavLink> *@
+@*             <button class="btn btn-outline-success" @onclick="() => AddToCart(product)">Добавить в корзину</button> *@
+@*         </p> *@
+@*     } *@
+
+@foreach (var product in _products)
+{
+    <p>
+        @product.Name стоимостью @product.Price $
+    </p>
+}
 @code 
 {
     private void AddToCart(Product product)
