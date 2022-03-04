@@ -2,16 +2,16 @@
 
 @using BlazorWebAssemblyKW12.Data
 @using Glory.Domain
+@using ShopClient
 
 @inject ICatalog _myCatalog;
 @inject ICart _cart;
-@* @inject HttpClient _client; *@
-@inject IList<ProductDTO> _products;
+@inject ClientDTO _productsClientDto;
 
 <h3>
     Catalog
-    @* <NavLink class="nav-link" *@
-    @*          href="addProductPage">+</NavLink> *@
+    <NavLink class="nav-link"
+             href="addProductPage">+</NavLink>
 </h3>
 
 @* @foreach (Product prod in @_myCatalog.GetProducts(DateTime.Now.DayOfWeek, "Windows")) *@
@@ -24,14 +24,25 @@
 @*     </p> *@
 @* } *@
 
-@foreach (var product in _products)
+@if (_products != null)
 {
-    <p>
-        @product.Name стоимостью @product.Price $
-    </p>
+    @foreach (var product in _products)
+    {
+        <ProductComponent Product="product"/>
+        <button class="btn btn-outline-success"
+                @onclick=" async () => await _productsClientDto.AddToCart(product.Id)">
+            Добавить в корзину
+        </button>
+    }
 }
-
 @code
 {
-    private string _ref;
+    // private string? _ref;
+    private IList<ProductDTO>? _products;
+    protected override async void OnInitialized()
+    {
+        await base.OnInitializedAsync();
+       _products = await _productsClientDto.GetProducts();
+        await InvokeAsync(StateHasChanged);
+    }
 }

@@ -1,10 +1,17 @@
 @page "/CartPage"
+
 @using BlazorWebAssemblyKW12.Data
-@inject ICart _cart;
+@using Microsoft.EntityFrameworkCore
+@using System.Reflection.Metadata.Ecma335
+
+@* @inject ICart _cart; *@
+@using Glory.Domain
+@using ShopClient
+@inject ClientDTO _productsClientDto;
 
 <h3>Cart</h3>
-<p>Кол-во продуктов в корзине: @_cart.GetCount()</p>
-<button class="btn-danger" @onclick="() => _cart.Clear()">Очистить</button>
+@* <p>Кол-во продуктов в корзине: @_cart.GetCount()</p> *@
+@* <button class="btn-danger" @onclick="() => _cart.Clear()">Очистить</button> *@
 @* @foreach (var kvProduct in _cart.GetCartProducts()) *@
 @* { *@
 @*     <p> *@
@@ -15,6 +22,37 @@
 @*         <button class="btn-danger" @onclick="() => _cart.DeleteProduct(kvProduct.Key)">Удалить</button> *@
 @*     </p> *@
 @* } *@
+
+@if (_cart != null)
+{
+    @foreach (var product in _cart)
+    {
+        <ProductComponent Product="product"/>
+        <p>Кол-во: @product.Quantity</p> 
+        <button class="btn btn-danger"
+                @onclick="async () => await Delete(product.Id)">
+            Удалить
+        </button>
+    }
+}
+
+
 @code {
-    private string _ref;
+    // private string _ref;
+
+    private IList<ProductDTO>? _cart;
+    protected override async Task OnInitializedAsync()
+    {
+        await base.OnInitializedAsync();
+        _cart = (await _productsClientDto.GetProducts())
+            ?.Where(p => p.Quantity > 0)
+            .ToList();
+        await InvokeAsync(StateHasChanged);
+    }
+
+    private async Task Delete(int id)
+    {
+        await _productsClientDto.DeleteFromCart(id);
+        await OnInitializedAsync();
+    }
 }

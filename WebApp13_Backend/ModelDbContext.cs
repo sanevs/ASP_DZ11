@@ -1,7 +1,5 @@
-using System.Data;
-using System.Dynamic;
+using Glory.Domain;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Internal;
 
 namespace WebApp13_Backend;
 

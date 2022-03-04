@@ -8,7 +8,8 @@
     ".NETCoreApp,Version=v6.0": {
       "KW11 BlazorServer/1.0.0": {
         "dependencies": {
-          "Catalog": "1.0.0"
+          "Catalog": "1.0.0",
+          "ShopClient": "1.0.0"
         },
         "runtime": {
           "KW11 BlazorServer.dll": {}
@@ -17,6 +18,14 @@
       "Catalog/1.0.0": {
         "runtime": {
           "Catalog.dll": {}
+        }
+      },
+      "ShopClient/1.0.0": {
+        "dependencies": {
+          "Catalog": "1.0.0"
+        },
+        "runtime": {
+          "ShopClient.dll": {}
         }
       }
     }
@@ -28,6 +37,11 @@
       "sha512": ""
     },
     "Catalog/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ShopClient/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

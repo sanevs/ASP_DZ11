@@ -1,10 +1,12 @@
 @page "/catalog"
 
+@* @using KW11_BlazorServer.Data *@
 @using global::Glory.Domain
-@using KW11_BlazorServer.Data
-@inject ICatalog _myCatalog;
-@* @inject HttpClient _client; *@
-@inject IList<ProductDTO> _products;
+@using ShopClient
+@using System.Net.Http.Headers
+
+@* @inject ICatalog _myCatalog; *@
+@inject ClientDTO _clientDto;
 
 <h3>Catalog</h3>
 
@@ -18,16 +20,32 @@
 @*         </p> *@
 @*     } *@
 
-@foreach (var product in _products)
+@if (_products != null)
 {
-    <p>
-        @product.Name стоимостью @product.Price $
-    </p>
+    @foreach (var product in _products)
+    {
+        <p>
+            @product.Name стоимостью @product.Price $
+            <button class="btn btn-outline-success"
+                    @onclick="async () => await _clientDto.AddToCart(product.Id)">
+                Добавить в корзину
+            </button>
+        </p>
+    }
 }
+
 @code 
 {
-    private void AddToCart(Product product)
+    private IList<ProductDTO>? _products;
+    
+    protected override async Task OnInitializedAsync()
     {
-        ProductsCart.Cart.Add(product);
+        _products = await _clientDto.GetProducts();
+        await base.OnInitializedAsync();
     }
+
+    // private void AddToCart(Product product)
+    // {
+    //     ProductsCart.Cart.Add(product);
+    // }
 }

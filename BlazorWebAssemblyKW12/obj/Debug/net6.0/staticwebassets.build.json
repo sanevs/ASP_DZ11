@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "yilHWkwZjdtT6ZAVh70z+kXWJ9PVmBNYBHKBSAdUQhI=",
+  "Hash": "zJxbCxj0HgQAW8RP2BLNg96C0xN2fFmLl1kVFCC9gP8=",
   "Source": "BlazorWebAssemblyKW12",
   "BasePath": "/",
   "Mode": "Root",
@@ -797,6 +797,40 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\Влад\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\6.0.1\\runtimes\\browser-wasm\\lib\\net6.0\\netstandard.dll"
+    },
+    {
+      "Identity": "D:\\Mystat домашка\\ASP\\ASP_KW3\\ASP_KW3\\BlazorWebAssemblyKW12\\bin\\Debug\\net6.0\\wwwroot\\_framework\\ShopClient.dll",
+      "SourceId": "BlazorWebAssemblyKW12",
+      "SourceType": "Computed",
+      "ContentRoot": "D:\\Mystat домашка\\ASP\\ASP_KW3\\ASP_KW3\\BlazorWebAssemblyKW12\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/ShopClient.dll",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "BlazorWebAssemblyResource",
+      "AssetTraitValue": "runtime",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "D:\\Mystat домашка\\ASP\\ASP_KW3\\ASP_KW3\\ShopClient\\bin\\Debug\\net6.0\\ShopClient.dll"
+    },
+    {
+      "Identity": "D:\\Mystat домашка\\ASP\\ASP_KW3\\ASP_KW3\\BlazorWebAssemblyKW12\\bin\\Debug\\net6.0\\wwwroot\\_framework\\ShopClient.pdb",
+      "SourceId": "BlazorWebAssemblyKW12",
+      "SourceType": "Computed",
+      "ContentRoot": "D:\\Mystat домашка\\ASP\\ASP_KW3\\ASP_KW3\\BlazorWebAssemblyKW12\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/ShopClient.pdb",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "BlazorWebAssemblyResource",
+      "AssetTraitValue": "symbol",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "D:\\Mystat домашка\\ASP\\ASP_KW3\\ASP_KW3\\ShopClient\\bin\\Debug\\net6.0\\ShopClient.pdb"
     },
     {
       "Identity": "D:\\Mystat домашка\\ASP\\ASP_KW3\\ASP_KW3\\BlazorWebAssemblyKW12\\bin\\Debug\\net6.0\\wwwroot\\_framework\\System.AppContext.dll",
@@ -5967,6 +6001,23 @@
       "OriginalItemSpec": "D:\\Mystat домашка\\ASP\\ASP_KW3\\ASP_KW3\\BlazorWebAssemblyKW12\\bin\\Debug\\net6.0\\wwwroot\\_framework\\System.Security.SecureString.dll"
     },
     {
+      "Identity": "D:\\Mystat домашка\\ASP\\ASP_KW3\\ASP_KW3\\BlazorWebAssemblyKW12\\obj\\Debug\\net6.0\\build-gz\\QroOzWFn.gz",
+      "SourceId": "BlazorWebAssemblyKW12",
+      "SourceType": "Computed",
+      "ContentRoot": "D:\\Mystat домашка\\ASP\\ASP_KW3\\ASP_KW3\\BlazorWebAssemblyKW12\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/ShopClient.pdb.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "D:\\Mystat домашка\\ASP\\ASP_KW3\\ASP_KW3\\BlazorWebAssemblyKW12\\bin\\Debug\\net6.0\\wwwroot\\_framework\\ShopClient.pdb",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "D:\\Mystat домашка\\ASP\\ASP_KW3\\ASP_KW3\\BlazorWebAssemblyKW12\\bin\\Debug\\net6.0\\wwwroot\\_framework\\ShopClient.pdb"
+    },
+    {
       "Identity": "D:\\Mystat домашка\\ASP\\ASP_KW3\\ASP_KW3\\BlazorWebAssemblyKW12\\obj\\Debug\\net6.0\\build-gz\\qRs3fsv+.gz",
       "SourceId": "BlazorWebAssemblyKW12",
       "SourceType": "Computed",
@@ -6866,6 +6917,23 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "D:\\Mystat домашка\\ASP\\ASP_KW3\\ASP_KW3\\BlazorWebAssemblyKW12\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Components.Web.dll"
+    },
+    {
+      "Identity": "D:\\Mystat домашка\\ASP\\ASP_KW3\\ASP_KW3\\BlazorWebAssemblyKW12\\obj\\Debug\\net6.0\\build-gz\\za+fgRHv.gz",
+      "SourceId": "BlazorWebAssemblyKW12",
+      "SourceType": "Computed",
+      "ContentRoot": "D:\\Mystat домашка\\ASP\\ASP_KW3\\ASP_KW3\\BlazorWebAssemblyKW12\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/ShopClient.dll.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "D:\\Mystat домашка\\ASP\\ASP_KW3\\ASP_KW3\\BlazorWebAssemblyKW12\\bin\\Debug\\net6.0\\wwwroot\\_framework\\ShopClient.dll",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "D:\\Mystat домашка\\ASP\\ASP_KW3\\ASP_KW3\\BlazorWebAssemblyKW12\\bin\\Debug\\net6.0\\wwwroot\\_framework\\ShopClient.dll"
     },
     {
       "Identity": "D:\\Mystat домашка\\ASP\\ASP_KW3\\ASP_KW3\\BlazorWebAssemblyKW12\\obj\\Debug\\net6.0\\build-gz\\zb+avWJn.gz",

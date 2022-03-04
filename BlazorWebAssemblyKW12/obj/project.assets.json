@@ -479,6 +479,19 @@
         "runtime": {
           "bin/placeholder/Catalog.dll": {}
         }
+      },
+      "ShopClient/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Catalog": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/ShopClient.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ShopClient.dll": {}
+        }
       }
     },
     "net6.0/browser-wasm": {
@@ -952,6 +965,19 @@
         },
         "runtime": {
           "bin/placeholder/Catalog.dll": {}
+        }
+      },
+      "ShopClient/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Catalog": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/ShopClient.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ShopClient.dll": {}
         }
       }
     }
@@ -1823,6 +1849,11 @@
       "type": "project",
       "path": "../Catalog/Catalog.csproj",
       "msbuildProject": "../Catalog/Catalog.csproj"
+    },
+    "ShopClient/1.0.0": {
+      "type": "project",
+      "path": "../ShopClient/ShopClient.csproj",
+      "msbuildProject": "../ShopClient/ShopClient.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -1830,7 +1861,8 @@
       "Catalog >= 1.0.0",
       "Microsoft.AspNetCore.Components.WebAssembly >= 6.0.1",
       "Microsoft.AspNetCore.Components.WebAssembly.DevServer >= 6.0.1",
-      "Microsoft.EntityFrameworkCore >= 6.0.2"
+      "Microsoft.EntityFrameworkCore >= 6.0.2",
+      "ShopClient >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -1862,6 +1894,9 @@
           "projectReferences": {
             "D:\\Mystat домашка\\ASP\\ASP_KW3\\ASP_KW3\\Catalog\\Catalog.csproj": {
               "projectPath": "D:\\Mystat домашка\\ASP\\ASP_KW3\\ASP_KW3\\Catalog\\Catalog.csproj"
+            },
+            "D:\\Mystat домашка\\ASP\\ASP_KW3\\ASP_KW3\\ShopClient\\ShopClient.csproj": {
+              "projectPath": "D:\\Mystat домашка\\ASP\\ASP_KW3\\ASP_KW3\\ShopClient\\ShopClient.csproj"
             }
           }
         }

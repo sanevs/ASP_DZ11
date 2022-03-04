@@ -1,6 +1,5 @@
 using Glory.Domain;
-using Microsoft.AspNetCore.Components;
-using Microsoft.AspNetCore.Components.Web;
+using ShopClient;
 using KW11_BlazorServer.Data;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -9,14 +8,9 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
 builder.Services.AddSingleton<WeatherForecastService>();
-builder.Services.AddSingleton<ICatalog, Glory.Domain.Catalog>();
+builder.Services.AddSingleton<ICatalog, Catalog>();
 
-//builder.Services.AddSingleton<HttpClient>();
-builder.Services.AddSingleton<IList<ProductDTO>, List<ProductDTO>>( (s) =>
-{
-    var client = new HttpClient();
-    return client.GetFromJsonAsync<List<ProductDTO>>("http://localhost:5194/products").Result;
-});
+builder.Services.AddSingleton(new ClientDTO("http://localhost:5194"));
 
 var app = builder.Build();
 

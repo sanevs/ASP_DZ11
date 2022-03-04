@@ -23,12 +23,13 @@ public class MyClient
     public Task<string> AddProduct(string name, int price, int categoryId) => 
         _client.GetStringAsync($"{_uri}/add/{name}/{price}/{categoryId}");
 
-    public void Print(List<Product> products)
+    public void Print(List<Product>? products)
     {
         Console.WriteLine("*****Products:*****");
-        foreach (var product in products)
-        {
-            Console.WriteLine(product.Name + $"({product.Category.Name}'s category), " + product.Price);
-        }
+        if (products != null)
+            foreach (var product in products)
+            {
+                Console.WriteLine(product.Name + $"({product.Category.Name}'s category), " + product.Price);
+            }
     }
 }

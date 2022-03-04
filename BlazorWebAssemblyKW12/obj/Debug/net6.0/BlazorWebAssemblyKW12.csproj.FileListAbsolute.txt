@@ -837,3 +837,11 @@ D:\Mystat домашка\ASP\ASP_KW3\ASP_KW3\BlazorWebAssemblyKW12\obj\Debug\net
 D:\Mystat домашка\ASP\ASP_KW3\ASP_KW3\BlazorWebAssemblyKW12\obj\Debug\net6.0\build-gz\quTvp7fr.gz
 D:\Mystat домашка\ASP\ASP_KW3\ASP_KW3\BlazorWebAssemblyKW12\obj\Debug\net6.0\build-gz\c5BlNdXb.gz
 D:\Mystat домашка\ASP\ASP_KW3\ASP_KW3\BlazorWebAssemblyKW12\obj\Debug\net6.0\build-gz\l5T5niRo.gz
+D:\Mystat домашка\ASP\ASP_KW3\ASP_KW3\BlazorWebAssemblyKW12\bin\Debug\net6.0\wwwroot\_framework\ShopClient.dll
+D:\Mystat домашка\ASP\ASP_KW3\ASP_KW3\BlazorWebAssemblyKW12\bin\Debug\net6.0\wwwroot\_framework\ShopClient.pdb
+D:\Mystat домашка\ASP\ASP_KW3\ASP_KW3\BlazorWebAssemblyKW12\bin\Debug\net6.0\wwwroot\_framework\ShopClient.pdb.gz
+D:\Mystat домашка\ASP\ASP_KW3\ASP_KW3\BlazorWebAssemblyKW12\bin\Debug\net6.0\wwwroot\_framework\ShopClient.dll.gz
+D:\Mystat домашка\ASP\ASP_KW3\ASP_KW3\BlazorWebAssemblyKW12\bin\Debug\net6.0\ShopClient.dll
+D:\Mystat домашка\ASP\ASP_KW3\ASP_KW3\BlazorWebAssemblyKW12\bin\Debug\net6.0\ShopClient.pdb
+D:\Mystat домашка\ASP\ASP_KW3\ASP_KW3\BlazorWebAssemblyKW12\obj\Debug\net6.0\build-gz\za+fgRHv.gz
+D:\Mystat домашка\ASP\ASP_KW3\ASP_KW3\BlazorWebAssemblyKW12\obj\Debug\net6.0\build-gz\QroOzWFn.gz

@@ -3,12 +3,12 @@
 @inject ICatalog _catalog;
 
 <h3>Product </h3>
-<h4>@_currentProduct.Name, price = @_currentProduct.Price</h4>
+<h4>@_currentProduct?.Name, price = @_currentProduct?.Price</h4>
 <p>
-    <img src="@_currentProduct.ImageRef" width="200" height="200"/>
+    <img src="@_currentProduct?.ImageRef" width="200" height="200"/>
 </p>
 @code {
-    private Product _currentProduct;
+    private Product? _currentProduct;
 
     protected override void OnInitialized()
     {

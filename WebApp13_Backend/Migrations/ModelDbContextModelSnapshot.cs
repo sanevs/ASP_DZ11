@@ -16,7 +16,7 @@ namespace WebApp13_Backend.Migrations
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "6.0.2");
 
-            modelBuilder.Entity("WebApp13_Backend.ProductDTO", b =>
+            modelBuilder.Entity("Glory.Domain.ProductDTO", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -28,6 +28,9 @@ namespace WebApp13_Backend.Migrations
 
                     b.Property<decimal>("Price")
                         .HasColumnType("TEXT");
+
+                    b.Property<int>("Quantity")
+                        .HasColumnType("INTEGER");
 
                     b.HasKey("Id");
 
