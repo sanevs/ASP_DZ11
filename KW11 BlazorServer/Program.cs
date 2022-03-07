@@ -10,7 +10,7 @@ builder.Services.AddServerSideBlazor();
 builder.Services.AddSingleton<WeatherForecastService>();
 builder.Services.AddSingleton<ICatalog, Catalog>();
 
-builder.Services.AddSingleton(new ClientDTO("http://localhost:5194"));
+builder.Services.AddSingleton(new ClientDTO("http://localhost:5194", new()));
 
 var app = builder.Build();
 

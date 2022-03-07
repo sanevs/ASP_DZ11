@@ -8,10 +8,10 @@ public class ClientDTO
     private readonly string _uri;
     private readonly HttpClient _client;
 
-    public ClientDTO(string uri)
+    public ClientDTO(string uri, HttpClient client)
     {
         _uri = uri;
-        _client = new HttpClient();
+        _client = client;
     }
 
     public Task<IList<ProductDTO>?> GetProducts() =>

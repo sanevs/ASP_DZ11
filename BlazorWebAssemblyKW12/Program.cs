@@ -12,6 +12,6 @@ builder.RootComponents.Add<HeadOutlet>("head::after");
 builder.Services.AddSingleton<ICatalog, Catalog>();
 builder.Services.AddSingleton<ICart, Cart>();
 builder.Services.AddSingleton<Categories>();
-builder.Services.AddSingleton(new ClientDTO("http://localhost:5194"));
+builder.Services.AddSingleton(new ClientDTO("http://localhost:5194", new ()));
 
 await builder.Build().RunAsync();
