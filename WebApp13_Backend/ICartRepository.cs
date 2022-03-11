@@ -2,9 +2,8 @@ using Glory.Domain;
 
 namespace WebApp13_Backend;
 
-public interface ICatalogRepository
+public interface ICartRepository
 {
-    Task<IList<ProductDTO>> GetAll();
     Task Add(ProductDTO product);
-    
+    Task Delete(ProductDTO product);
 }

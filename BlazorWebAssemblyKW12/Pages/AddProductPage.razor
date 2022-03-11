@@ -1,6 +1,7 @@
 @page "/AddProductPage"
 
 @using System.ComponentModel.DataAnnotations
+@using Glory.Domain
 @using ShopClient
 
 @inject ClientDTO _client; 
@@ -30,5 +31,5 @@
 
     private async void AddValidProduct() =>
         await _client.AddProduct(
-            _addFormModel.Name, _addFormModel.Price);
+            new ProductDTO(0, _addFormModel.Name, _addFormModel.Price));
 }

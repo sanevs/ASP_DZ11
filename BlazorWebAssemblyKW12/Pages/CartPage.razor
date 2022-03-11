@@ -30,7 +30,7 @@
         <ProductComponent Product="product"/>
         <p>Кол-во: @product.Quantity</p> 
         <button class="btn btn-danger"
-                @onclick="async () => await Delete(product.Id)">
+                @onclick="async () => await Delete(product)">
             Удалить
         </button>
     }
@@ -50,9 +50,9 @@
         await InvokeAsync(StateHasChanged);
     }
 
-    private async Task Delete(int id)
+    private async Task Delete(ProductDTO product)
     {
-        await _productsClientDto.DeleteFromCart(id);
+        await _productsClientDto.DeleteFromCart(product);
         await OnInitializedAsync();
     }
 }

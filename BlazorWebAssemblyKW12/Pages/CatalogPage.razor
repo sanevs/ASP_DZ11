@@ -30,7 +30,7 @@
     {
         <ProductComponent Product="product"/>
         <button class="btn btn-outline-success"
-                @onclick=" async () => await _productsClientDto.AddToCart(product.Id)">
+                @onclick=" async () => await _productsClientDto.AddToCart(product)">
             Добавить в корзину
         </button>
     }

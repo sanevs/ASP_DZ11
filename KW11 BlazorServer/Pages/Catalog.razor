@@ -27,7 +27,7 @@
         <p>
             @product.Name стоимостью @product.Price $
             <button class="btn btn-outline-success"
-                    @onclick="async () => await _clientDto.AddToCart(product.Id)">
+                    @onclick="async () => await _clientDto.AddToCart(product)">
                 Добавить в корзину
             </button>
         </p>

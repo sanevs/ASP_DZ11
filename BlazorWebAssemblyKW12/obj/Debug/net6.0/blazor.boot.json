@@ -201,16 +201,16 @@
       "netstandard.dll": "sha256-E5RFhGIaDH5QM6BEbFUuHU8U9wP6N6jbo5MCttzLOCM=",
       "System.Private.CoreLib.dll": "sha256-9NtEbYixyog7vUmeYXyyqzfBXUYl8wxoVQ26Ji7sNRg=",
       "Catalog.dll": "sha256-jtkI6nB4rfYe47k7wJZUEMo3neuU3WXL2bjyy7TPBA4=",
-      "ShopClient.dll": "sha256-Efw7LvCddlBuHwlE6VYG8hHNFv010klxTRGlCUUtGPk=",
-      "BlazorWebAssemblyKW12.dll": "sha256-qCR1n0QyXsdlsnYAAfGlRxInLhHaMAa\/HTZYd6WfcDE="
+      "ShopClient.dll": "sha256-ixRW6CoXwI9f5DWCuARI0YogwSg7sHWSSbz6YnN8cfo=",
+      "BlazorWebAssemblyKW12.dll": "sha256-2BXRZQVZPWiRxmDXtdGO3q5ETWj\/jcS6geURe0nC2bw="
     },
     "extensions": null,
     "lazyAssembly": null,
     "libraryInitializers": null,
     "pdb": {
       "Catalog.pdb": "sha256-VLcc+H+Qc3mVOt2Op0peDm+usyaIxh7kq2DICacGss0=",
-      "ShopClient.pdb": "sha256-qQQqeCeuuc6hRtfoHjOfyKE1wytXKOIKLZoJU7qJn6o=",
-      "BlazorWebAssemblyKW12.pdb": "sha256-XZj3NmHJkwhpsNZTfsbchq8O4LkqqVHG4rAe9uYLXxc="
+      "ShopClient.pdb": "sha256-045AJCA9ihKZ5M4L\/rX3EBBp3\/lD6BB21PJcoHO10rk=",
+      "BlazorWebAssemblyKW12.pdb": "sha256-yUYZs58BbCyOanAKK9lTLHmROjKdSGSmXMXWvNTr5uw="
     },
     "runtime": {
       "dotnet.6.0.1.9ycgj9dnv4.js": "sha256-awQsJ\/WxYhouHPuE+i3eJqjA4XClQlr2rD6nKvW80ww=",

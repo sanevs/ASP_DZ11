@@ -1,3 +1,4 @@
+using System.Net.Http.Headers;
 using System.Net.Http.Json;
 using Glory.Domain;
 
@@ -16,14 +17,14 @@ public class ClientDTO
 
     public Task<IList<ProductDTO>?> GetProducts() =>
         _client.GetFromJsonAsync<IList<ProductDTO>>(
-            $"{_uri}/products");
+            $"{_uri}/catalog/products");
 
-    public Task AddProduct(string name, int price) => 
-        _client.GetStringAsync($"{_uri}/addProduct/{name}/{price}");
+    public Task AddProduct(ProductDTO product) => 
+        _client.PostAsJsonAsync($"{_uri}/catalog/addProduct", product);
 
-    public Task AddToCart(int id) => 
-        _client.GetStringAsync($"{_uri}/addToCart/{id}");
+    public Task AddToCart(ProductDTO product) => 
+        _client.PostAsJsonAsync($"{_uri}/cart/addToCart", product);
     
-    public Task DeleteFromCart(int id) => 
-        _client.GetStringAsync($"{_uri}/deleteFromCart/{id}");
+    public Task DeleteFromCart(ProductDTO product) => 
+        _client.PostAsJsonAsync($"{_uri}/cart/deleteFromCart", product);
 }
