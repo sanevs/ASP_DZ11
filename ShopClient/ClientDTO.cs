@@ -18,9 +18,13 @@ public class ClientDTO
     public Task<IList<ProductDTO>?> GetProducts() =>
         _client.GetFromJsonAsync<IList<ProductDTO>>(
             $"{_uri}/catalog/products");
+    public Task<IList<AccountDTO>?> GetAccounts() =>
+        _client.GetFromJsonAsync<IList<AccountDTO>>($"{_uri}/accounts/all");
 
     public Task AddProduct(ProductDTO product) => 
         _client.PostAsJsonAsync($"{_uri}/catalog/addProduct", product);
+    public Task AddAccount(AccountDTO account) => 
+        _client.PostAsJsonAsync($"{_uri}/accounts/addAccount", account);
 
     public Task AddToCart(ProductDTO product) => 
         _client.PostAsJsonAsync($"{_uri}/cart/addToCart", product);

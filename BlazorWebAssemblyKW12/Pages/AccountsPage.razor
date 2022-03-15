@@ -1,0 +1,27 @@
+@page "/AccountsPage"
+@using ShopClient
+@using Glory.Domain
+
+@inject ClientDTO _client;
+
+<h3>Accounts</h3>
+@if (_accounts != null)
+{
+    @foreach (var account in _accounts)
+    {
+        <p>
+            @account.Name, @account.Email
+        </p>
+    }
+}
+
+@code {
+    private IList<AccountDTO>? _accounts;
+    protected override async void OnInitialized()
+    {
+        await base.OnInitializedAsync();
+        _accounts = await _client.GetAccounts();
+        await InvokeAsync(StateHasChanged);
+    }
+
+}

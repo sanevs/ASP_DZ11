@@ -22,6 +22,14 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/Mystat домашка/ASP/ASP_KW3/ASP_KW3/BlazorWebAssemblyKW12/Pages/AccountsPage.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWNjb3VudHNQYWdlLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Mystat домашка/ASP/ASP_KW3/ASP_KW3/BlazorWebAssemblyKW12/Pages/AddAccountPage.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRkQWNjb3VudFBhZ2UucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/Mystat домашка/ASP/ASP_KW3/ASP_KW3/BlazorWebAssemblyKW12/Pages/AddProductPage.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRkUHJvZHVjdFBhZ2UucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 

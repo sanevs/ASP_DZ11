@@ -1,0 +1,26 @@
+@page "/AddAccountPage"
+@using ShopClient
+@using Glory.Domain
+
+@inject ClientDTO _client; 
+
+<h3>Add Account</h3>
+
+<EditForm Model="_addFormModel" OnValidSubmit="AddValidAccount">
+    <DataAnnotationsValidator/>
+    <ValidationSummary/>
+    
+    Имя: <InputText @bind-Value="_addFormModel.Name"></InputText><br/>
+    Почта: <InputText @bind-Value="_addFormModel.Email"></InputText><br/>
+    Пароль: <InputText @bind-Value="_addFormModel.Password"></InputText><br/>
+    <br/>
+    <input type="submit" value="Добавить"/>
+</EditForm>
+
+@code {
+    private AccountDTO _addFormModel = new();
+    
+    private async void AddValidAccount() =>
+        await _client.AddAccount(
+            new AccountDTO(0, _addFormModel.Name, _addFormModel.Email, _addFormModel.Password));
+}

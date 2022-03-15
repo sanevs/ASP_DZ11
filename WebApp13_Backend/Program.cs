@@ -9,11 +9,18 @@ var builder = WebApplication.CreateBuilder(args);
 string dbPath = "kw13.db";
 builder.Services.AddDbContext<ModelDbContext>(
     options => options.UseSqlite($"Data Source={dbPath}"));
+
 builder.Services.AddScoped(typeof(IRepository<ProductDTO>), typeof(EfRepository<ProductDTO>));
+
 builder.Services.AddScoped<ICatalogRepository, CatalogRepository>();
 builder.Services.AddScoped<CatalogService>();
+
 builder.Services.AddScoped<ICartRepository, CartRepository>();
 builder.Services.AddScoped<CartService>();
+
+builder.Services.AddScoped<IAccountRepository, AccountRepository>();
+builder.Services.AddScoped<AccountService>();
+
 builder.Services.AddCors();
 builder.Services.AddControllers();
 
