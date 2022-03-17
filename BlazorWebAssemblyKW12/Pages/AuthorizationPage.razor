@@ -31,7 +31,7 @@ else if (_isPushed)
     private AccountDTO? _account = null;
     private bool _isPushed = false;
     
-    private async void AuthorizeValidAccount()
+    private async Task AuthorizeValidAccount()
     {
         _account = await _client.Authorize(
             new AccountRequestDTO(
