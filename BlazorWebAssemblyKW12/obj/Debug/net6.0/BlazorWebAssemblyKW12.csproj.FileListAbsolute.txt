@@ -845,3 +845,7 @@ D:\Mystat домашка\ASP\ASP_KW3\ASP_KW3\BlazorWebAssemblyKW12\bin\Debug\net
 D:\Mystat домашка\ASP\ASP_KW3\ASP_KW3\BlazorWebAssemblyKW12\bin\Debug\net6.0\ShopClient.pdb
 D:\Mystat домашка\ASP\ASP_KW3\ASP_KW3\BlazorWebAssemblyKW12\obj\Debug\net6.0\build-gz\za+fgRHv.gz
 D:\Mystat домашка\ASP\ASP_KW3\ASP_KW3\BlazorWebAssemblyKW12\obj\Debug\net6.0\build-gz\QroOzWFn.gz
+D:\Mystat домашка\ASP\ASP_KW3\ASP_KW3\BlazorWebAssemblyKW12\bin\Debug\net6.0\wwwroot\_framework\Microsoft.AspNet.Identity.Core.dll
+D:\Mystat домашка\ASP\ASP_KW3\ASP_KW3\BlazorWebAssemblyKW12\bin\Debug\net6.0\wwwroot\_framework\Microsoft.AspNet.Identity.Core.dll.gz
+D:\Mystat домашка\ASP\ASP_KW3\ASP_KW3\BlazorWebAssemblyKW12\bin\Debug\net6.0\Microsoft.AspNet.Identity.Core.dll
+D:\Mystat домашка\ASP\ASP_KW3\ASP_KW3\BlazorWebAssemblyKW12\obj\Debug\net6.0\build-gz\LGQIC3PQ.gz

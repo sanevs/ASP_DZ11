@@ -1,0 +1,44 @@
+@page "/AuthorizationPage"
+@using ShopClient
+@using Microsoft.AspNetCore.Components
+@using Glory.Domain
+
+@inject ClientDTO _client;
+
+<h3>Authorization</h3>
+
+<EditForm Model="_addFormModel" OnValidSubmit="AuthorizeValidAccount">
+    <DataAnnotationsValidator/>
+    <ValidationSummary/>
+    
+    Почта: <InputText @bind-Value="_addFormModel.Email"></InputText><br/>
+    Пароль: <InputText @bind-Value="_addFormModel.Password"></InputText><br/>
+    <br/>
+    <input type="submit" value="Войти"/>
+</EditForm>
+@if (_account != null && _account.Id != 0)
+{
+    <p>Hi, @_account?.Name!</p>
+}
+else if (_isPushed)
+{
+    <p>Error 401: Unauthorized</p>
+}
+
+
+@code {
+    private AccountRequestDTO _addFormModel = new();
+    private AccountDTO? _account = null;
+    private bool _isPushed = false;
+    
+    private async void AuthorizeValidAccount()
+    {
+        _account = await _client.Authorize(
+            new AccountRequestDTO(
+                _addFormModel.Name,
+                _addFormModel.Email,
+                _addFormModel.Password));
+        _isPushed = true;
+    }
+
+}

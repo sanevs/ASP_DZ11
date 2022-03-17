@@ -18,9 +18,12 @@
 </EditForm>
 
 @code {
-    private AccountDTO _addFormModel = new();
+    private AccountRequestDTO _addFormModel = new();
     
     private async void AddValidAccount() =>
         await _client.AddAccount(
-            new AccountDTO(0, _addFormModel.Name, _addFormModel.Email, _addFormModel.Password));
+            new AccountRequestDTO(
+                _addFormModel.Name, 
+                _addFormModel.Email, 
+                _addFormModel.Password));
 }

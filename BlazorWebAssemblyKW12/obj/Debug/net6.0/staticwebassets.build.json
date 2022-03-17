@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "zJxbCxj0HgQAW8RP2BLNg96C0xN2fFmLl1kVFCC9gP8=",
+  "Hash": "NJ5iYO4gpCcm7md1adEKwmLbbphLglQXXWonmvDFXZE=",
   "Source": "BlazorWebAssemblyKW12",
   "BasePath": "/",
   "Mode": "Root",
@@ -236,6 +236,23 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\Влад\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\6.0.1\\runtimes\\browser-wasm\\native\\icudt.dat"
+    },
+    {
+      "Identity": "D:\\Mystat домашка\\ASP\\ASP_KW3\\ASP_KW3\\BlazorWebAssemblyKW12\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNet.Identity.Core.dll",
+      "SourceId": "BlazorWebAssemblyKW12",
+      "SourceType": "Computed",
+      "ContentRoot": "D:\\Mystat домашка\\ASP\\ASP_KW3\\ASP_KW3\\BlazorWebAssemblyKW12\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Microsoft.AspNet.Identity.Core.dll",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "BlazorWebAssemblyResource",
+      "AssetTraitValue": "runtime",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\Влад\\.nuget\\packages\\microsoft.aspnet.identity.core\\2.2.3\\lib\\net45\\Microsoft.AspNet.Identity.Core.dll"
     },
     {
       "Identity": "D:\\Mystat домашка\\ASP\\ASP_KW3\\ASP_KW3\\BlazorWebAssemblyKW12\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Authorization.dll",
@@ -5472,6 +5489,23 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "D:\\Mystat домашка\\ASP\\ASP_KW3\\ASP_KW3\\BlazorWebAssemblyKW12\\bin\\Debug\\net6.0\\wwwroot\\_framework\\System.Reflection.Primitives.dll"
+    },
+    {
+      "Identity": "D:\\Mystat домашка\\ASP\\ASP_KW3\\ASP_KW3\\BlazorWebAssemblyKW12\\obj\\Debug\\net6.0\\build-gz\\LGQIC3PQ.gz",
+      "SourceId": "BlazorWebAssemblyKW12",
+      "SourceType": "Computed",
+      "ContentRoot": "D:\\Mystat домашка\\ASP\\ASP_KW3\\ASP_KW3\\BlazorWebAssemblyKW12\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Microsoft.AspNet.Identity.Core.dll.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "D:\\Mystat домашка\\ASP\\ASP_KW3\\ASP_KW3\\BlazorWebAssemblyKW12\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNet.Identity.Core.dll",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "D:\\Mystat домашка\\ASP\\ASP_KW3\\ASP_KW3\\BlazorWebAssemblyKW12\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNet.Identity.Core.dll"
     },
     {
       "Identity": "D:\\Mystat домашка\\ASP\\ASP_KW3\\ASP_KW3\\BlazorWebAssemblyKW12\\obj\\Debug\\net6.0\\build-gz\\LgyD0CVH.gz",

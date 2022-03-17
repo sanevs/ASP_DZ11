@@ -1,5 +1,7 @@
 using System.Net.Http.Headers;
 using System.Net.Http.Json;
+using System.Reflection.Metadata.Ecma335;
+using System.Text.Json;
 using Glory.Domain;
 
 namespace ShopClient;
@@ -23,8 +25,29 @@ public class ClientDTO
 
     public Task AddProduct(ProductDTO product) => 
         _client.PostAsJsonAsync($"{_uri}/catalog/addProduct", product);
-    public Task AddAccount(AccountDTO account) => 
-        _client.PostAsJsonAsync($"{_uri}/accounts/addAccount", account);
+    public Task AddAccount(AccountRequestDTO accountRequest) => 
+        _client.PostAsJsonAsync($"{_uri}/accounts/addAccount", accountRequest);
+
+    public async Task<AccountDTO?> Authorize(AccountRequestDTO accountRequest)
+    {
+        var message = await _client.PostAsJsonAsync($"{_uri}/accounts/Authorize", accountRequest);
+        
+        var accountJson = await message.Content.ReadAsStringAsync();
+        
+        return await Task.Run(() =>
+        {
+            var jsonSerializerOptions = new JsonSerializerOptions
+            {
+                PropertyNamingPolicy = JsonNamingPolicy.CamelCase
+            };
+        
+            return JsonSerializer.Deserialize(accountJson, typeof(AccountDTO), jsonSerializerOptions) as AccountDTO;
+        });
+        
+        //var stream = await message.Content.ReadAsStreamAsync();
+        //return await JsonSerializer.DeserializeAsync<AccountDTO>(stream);
+        
+    }
 
     public Task AddToCart(ProductDTO product) => 
         _client.PostAsJsonAsync($"{_uri}/cart/addToCart", product);

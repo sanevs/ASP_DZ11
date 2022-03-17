@@ -50,3 +50,4 @@ D:\Mystat домашка\ASP\ASP_KW3\ASP_KW3\ConsoleTest\obj\Debug\net6.0\Consol
 D:\Mystat домашка\ASP\ASP_KW3\ASP_KW3\ConsoleTest\obj\Debug\net6.0\ref\ConsoleTest.dll
 D:\Mystat домашка\ASP\ASP_KW3\ASP_KW3\ConsoleTest\obj\Debug\net6.0\ConsoleTest.pdb
 D:\Mystat домашка\ASP\ASP_KW3\ASP_KW3\ConsoleTest\obj\Debug\net6.0\ConsoleTest.genruntimeconfig.cache
+D:\Mystat домашка\ASP\ASP_KW3\ASP_KW3\ConsoleTest\bin\Debug\net6.0\Microsoft.AspNet.Identity.Core.dll

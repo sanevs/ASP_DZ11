@@ -1,4 +1,5 @@
 using System.ComponentModel.DataAnnotations;
+using Microsoft.AspNet.Identity;
 
 namespace Glory.Domain;
 
@@ -11,17 +12,17 @@ public class AccountDTO
     [MinLength(1)]
     public string Name { get; set; }
     
-    [Required]
+    [Required, EmailAddress]
     public string Email { get; set; }
     
     [Required]
-    public string Password { get; set; }
+    public string HashedPassword { get; set; }
 
-    public AccountDTO(int id = 0, string name = "", string email = "", string password = "")
+    public AccountDTO(int id = 0, string name = "", string email = "", string hashedPassword = "")
     {
         Id = id;
         Name = name;
         Email = email;
-        Password = password;
+        HashedPassword = hashedPassword;
     }
 }

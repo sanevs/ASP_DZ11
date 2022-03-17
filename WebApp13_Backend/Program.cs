@@ -1,5 +1,6 @@
 using System.Reflection.Metadata.Ecma335;
 using Glory.Domain;
+using Microsoft.AspNet.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using WebApp13_Backend;
@@ -21,8 +22,13 @@ builder.Services.AddScoped<CartService>();
 builder.Services.AddScoped<IAccountRepository, AccountRepository>();
 builder.Services.AddScoped<AccountService>();
 
+builder.Services.AddSingleton<IPasswordHasher, PasswordHasher>();
+
 builder.Services.AddCors();
 builder.Services.AddControllers();
+
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 app.MapControllers();
@@ -31,6 +37,12 @@ app.UseCors(policy => policy
     .AllowAnyHeader()
     .SetIsOriginAllowed(_ => true)
     .AllowCredentials());
+
+if (app.Environment.IsDevelopment())
+{
+    app.UseSwagger();
+    app.UseSwaggerUI();
+}
 
 //app.MapGet("/products", async (CatalogService service) => 
 //    await service.GetAll());

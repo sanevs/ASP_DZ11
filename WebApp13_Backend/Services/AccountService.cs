@@ -1,4 +1,5 @@
 using Glory.Domain;
+using Microsoft.AspNet.Identity;
 
 namespace WebApp13_Backend;
 
@@ -12,5 +13,8 @@ public class AccountService
     }
 
     public async Task<IList<AccountDTO>> GetAll() => await _account.GetAll();
-    public async Task AddUser(AccountDTO account) => await _account.AddUser(account);
+    public async Task AddUser(IPasswordHasher hasher, AccountRequestDTO account) => 
+        await _account.AddUser(hasher, account);
+    public async Task<AccountDTO?> AuthorizeUser(IPasswordHasher hasher, AccountRequestDTO account) => 
+        await _account.AuthorizeUser(hasher, account);
 }

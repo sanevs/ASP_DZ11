@@ -30,3 +30,4 @@ D:\Mystat домашка\ASP\ASP_KW3\ASP_KW3\KW11 BlazorServer\bin\Debug\net6.0\
 D:\Mystat домашка\ASP\ASP_KW3\ASP_KW3\KW11 BlazorServer\obj\Debug\net6.0\KW11 BlazorServer.csproj.CopyComplete
 D:\Mystat домашка\ASP\ASP_KW3\ASP_KW3\KW11 BlazorServer\bin\Debug\net6.0\ShopClient.dll
 D:\Mystat домашка\ASP\ASP_KW3\ASP_KW3\KW11 BlazorServer\bin\Debug\net6.0\ShopClient.pdb
+D:\Mystat домашка\ASP\ASP_KW3\ASP_KW3\KW11 BlazorServer\bin\Debug\net6.0\Microsoft.AspNet.Identity.Core.dll

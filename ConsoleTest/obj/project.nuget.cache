@@ -1,8 +1,21 @@
 {
   "version": 2,
-  "dgSpecHash": "Wo4g5uTR2ZVeikQTa104qShk0AJIiP4qL6Ytl8/3crDN1d7I/iOprOwOqsAQTet1vmp8jfyJ4RVMZVKF01fhWw==",
+  "dgSpecHash": "m3PScRXy3p2SDBMxzi+pSYSx/GpSCbviA9puZLDabfpyQYV7TX6HA9pkD8oIpNfVzsniF9oYv+tp0NkeFsUBCw==",
   "success": true,
   "projectFilePath": "D:\\Mystat домашка\\ASP\\ASP_KW3\\ASP_KW3\\ConsoleTest\\ConsoleTest.csproj",
-  "expectedPackageFiles": [],
-  "logs": []
+  "expectedPackageFiles": [
+    "C:\\Users\\Влад\\.nuget\\packages\\microsoft.aspnet.identity.core\\2.2.3\\microsoft.aspnet.identity.core.2.2.3.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Microsoft.AspNet.Identity.Core 2.2.3' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework 'net6.0'. This package may not be fully compatible with your project.",
+      "libraryId": "Microsoft.AspNet.Identity.Core",
+      "targetGraphs": [
+        "net6.0"
+      ]
+    }
+  ]
 }

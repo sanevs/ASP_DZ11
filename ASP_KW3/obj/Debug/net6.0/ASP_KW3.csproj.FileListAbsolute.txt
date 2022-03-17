@@ -46,3 +46,4 @@ D:\Mystat домашка\ASP\ASP_KW3\ASP_KW3\ASP_KW3\obj\Debug\net6.0\ASP_KW3.dl
 D:\Mystat домашка\ASP\ASP_KW3\ASP_KW3\ASP_KW3\obj\Debug\net6.0\ref\ASP_KW3.dll
 D:\Mystat домашка\ASP\ASP_KW3\ASP_KW3\ASP_KW3\obj\Debug\net6.0\ASP_KW3.pdb
 D:\Mystat домашка\ASP\ASP_KW3\ASP_KW3\ASP_KW3\obj\Debug\net6.0\ASP_KW3.genruntimeconfig.cache
+D:\Mystat домашка\ASP\ASP_KW3\ASP_KW3\ASP_KW3\bin\Debug\net6.0\Microsoft.AspNet.Identity.Core.dll

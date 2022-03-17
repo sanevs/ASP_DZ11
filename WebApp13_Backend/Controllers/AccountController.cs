@@ -1,5 +1,5 @@
-using System.Reflection.Metadata.Ecma335;
 using Glory.Domain;
+using Microsoft.AspNet.Identity;
 using Microsoft.AspNetCore.Mvc;
 
 namespace WebApp13_Backend;
@@ -20,9 +20,18 @@ public class AccountController : ControllerBase
     
 
     [HttpPost("addAccount")]
-    public async Task<ActionResult> AddProduct(AccountDTO account)
+    public async Task<ActionResult> AddAccount([FromServices] IPasswordHasher hasher, AccountRequestDTO account)
     {
-        await _service.AddUser(account);
-        return Ok(); 
+        await _service.AddUser(hasher, account);
+        return Ok();
+    }
+
+    [HttpPost("Authorize")]
+    public async Task<ActionResult<AccountDTO>?> Authorize([FromServices] IPasswordHasher hasher, AccountRequestDTO account)
+    {
+        var accountResult = await _service.AuthorizeUser(hasher, account);
+        if (accountResult == null)
+            return Unauthorized();
+        return Ok(accountResult);
     }
 }
