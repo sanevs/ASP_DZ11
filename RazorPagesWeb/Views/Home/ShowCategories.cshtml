@@ -1,8 +1,0 @@
-@using Glory.Domain
-@model System.Collections.Concurrent.ConcurrentBag<Category>
-
-<h2>Categories:</h2>
-@foreach (var category in @Model)
-{
-    <div class="alert-dark">@category.Name</div>
-}
