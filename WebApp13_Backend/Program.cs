@@ -1,7 +1,5 @@
-using System.Reflection.Metadata.Ecma335;
 using Glory.Domain;
 using Microsoft.AspNet.Identity;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using WebApp13_Backend;
 
@@ -31,6 +29,19 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
+
+app.Use(async (context, next) =>
+{
+    if (context.Request.Headers.UserAgent.Any( s => s.Contains("Edg")))
+    {
+        await next();
+    }
+    else
+    {
+        await context.Response.WriteAsync("Error browser");
+    }
+});
+
 app.MapControllers();
 app.UseCors(policy => policy
     .AllowAnyMethod()
@@ -43,6 +54,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+app.UseMiddleware<BackMiddleware>();
 
 //app.MapGet("/products", async (CatalogService service) => 
 //    await service.GetAll());

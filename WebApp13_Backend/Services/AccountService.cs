@@ -15,6 +15,16 @@ public class AccountService
     public async Task<IList<AccountDTO>> GetAll() => await _account.GetAll();
     public async Task AddUser(IPasswordHasher hasher, AccountRequestDTO account) => 
         await _account.AddUser(hasher, account);
-    public async Task<AccountDTO?> AuthorizeUser(IPasswordHasher hasher, AccountRequestDTO account) => 
-        await _account.AuthorizeUser(hasher, account);
+
+    public async Task<AccountDTO?> AuthorizeUser(IPasswordHasher hasher, AccountRequestDTO accountRequest)
+    {
+        var accounts = await GetAll();
+        var account = accounts?.First(
+            a => a.Email == accountRequest.Email);
+        if (account != null && 
+            hasher.VerifyHashedPassword(account.HashedPassword, accountRequest.Password) == 
+            PasswordVerificationResult.Success)
+            return account;
+        return null;
+    }
 }

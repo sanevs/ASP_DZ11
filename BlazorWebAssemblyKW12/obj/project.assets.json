@@ -496,7 +496,8 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
-          "Catalog": "1.0.0"
+          "Catalog": "1.0.0",
+          "Microsoft.Extensions.Logging.Abstractions": "6.0.0"
         },
         "compile": {
           "bin/placeholder/ShopClient.dll": {}
@@ -995,7 +996,8 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
-          "Catalog": "1.0.0"
+          "Catalog": "1.0.0",
+          "Microsoft.Extensions.Logging.Abstractions": "6.0.0"
         },
         "compile": {
           "bin/placeholder/ShopClient.dll": {}

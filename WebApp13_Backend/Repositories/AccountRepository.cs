@@ -28,15 +28,4 @@ public class AccountRepository : IAccountRepository
         await _context.SaveChangesAsync();
     }
 
-    public async Task<AccountDTO?> AuthorizeUser(IPasswordHasher hasher, AccountRequestDTO accountRequest)
-    {
-        var account = await _context.Accounts
-            .FirstOrDefaultAsync(
-                a => a.Email == accountRequest.Email);
-        if (account != null && 
-            hasher.VerifyHashedPassword(account.HashedPassword, accountRequest.Password) == 
-            PasswordVerificationResult.Success)
-            return account;
-        return null;
-    }
 }

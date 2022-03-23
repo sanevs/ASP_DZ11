@@ -1,8 +1,7 @@
-using System.Net.Http.Headers;
 using System.Net.Http.Json;
-using System.Reflection.Metadata.Ecma335;
 using System.Text.Json;
 using Glory.Domain;
+using Microsoft.Extensions.Logging;
 
 namespace ShopClient;
 
@@ -10,16 +9,17 @@ public class ClientDTO
 {
     private readonly string _uri;
     private readonly HttpClient _client;
-
+    
     public ClientDTO(string uri, HttpClient client)
     {
         _uri = uri;
         _client = client;
     }
 
-    public Task<IList<ProductDTO>?> GetProducts() =>
-        _client.GetFromJsonAsync<IList<ProductDTO>>(
+    public async Task<IList<ProductDTO>?> GetProducts() =>
+        await _client.GetFromJsonAsync<IList<ProductDTO>>(
             $"{_uri}/catalog/products");
+
     public Task<IList<AccountDTO>?> GetAccounts() =>
         _client.GetFromJsonAsync<IList<AccountDTO>>($"{_uri}/accounts/all");
 

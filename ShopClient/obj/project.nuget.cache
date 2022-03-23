@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "sRcpvvAZHJeO9hrXaka4B3DQogLyn0q8bNki1gLWCs8/JLxOwdXDkIGQnhetxP5DBKgU9uRTaL0ZgLJQ/usCSA==",
+  "dgSpecHash": "1uFOos11KY+y6OJ08VY1hEBdGudBdCDYze95Lm2wMPRxsflIf0vYftLQ+2iDwnwSmH3Yi2MbiaKvliZxiC97ag==",
   "success": true,
   "projectFilePath": "D:\\Mystat домашка\\ASP\\ASP_KW3\\ASP_KW3\\ShopClient\\ShopClient.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Влад\\.nuget\\packages\\microsoft.aspnet.identity.core\\2.2.3\\microsoft.aspnet.identity.core.2.2.3.nupkg.sha512"
+    "C:\\Users\\Влад\\.nuget\\packages\\microsoft.aspnet.identity.core\\2.2.3\\microsoft.aspnet.identity.core.2.2.3.nupkg.sha512",
+    "C:\\Users\\Влад\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\6.0.0\\microsoft.extensions.logging.abstractions.6.0.0.nupkg.sha512"
   ],
   "logs": [
     {

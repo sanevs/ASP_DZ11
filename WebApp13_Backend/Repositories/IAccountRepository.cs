@@ -7,5 +7,4 @@ public interface IAccountRepository
 {
     Task<IList<AccountDTO>> GetAll();
     Task AddUser(IPasswordHasher hasher, AccountRequestDTO accountRequest);
-    Task<AccountDTO?> AuthorizeUser(IPasswordHasher hasher, AccountRequestDTO accountRequest);
 }
