@@ -39,6 +39,8 @@ else if (_isPushed)
 
     private async Task AuthorizeValidAccount()
     {
+        if (Role is null)
+            Role = "user";
         _account = await _client.Authorize(
             new AccountRequestDTO(
                 _addFormModel.Name,
