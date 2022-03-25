@@ -16,33 +16,24 @@ public class BackMiddleware
     }
     public async Task InvokeAsync(HttpContext context)
     {
-        LogHeaders(context.Request.Headers);
-        LogHeaders(context.Response.Headers);
+        _logger.LogInformation("Request {r}", context.Request.Headers);
+        _logger.LogInformation("Response {r}", context.Response.Headers);
 
         context.Request.EnableBuffering();
-        if (context.Request.Body.CanRead)
-        {
-            using var reader = new StreamReader(context.Request.Body, 
-                Encoding.UTF8, false, leaveOpen: true);
-            string message = await reader.ReadToEndAsync();
-            _logger.LogInformation(message);
-            context.Request.Body.Position = 0;
-        }
+        LogBody(context.Request.Body);
+        LogBody(context.Response.Body);
         
-        //var stream = context.Request.Body;
-        //_logger.LogInformation(stream);
-        //_logger.LogInformation(context.Response.Body.ToString());
         await _next(context);
     }
-
-    private void LogHeaders(IHeaderDictionary headers)
+    
+    private async void LogBody(Stream body)
     {
-        var headersRequestList = headers
-            .Select(h => 
-                string.Concat(h.Key, " / ", h.Value));
-        foreach (var header in headersRequestList)
-        {
-            _logger.LogInformation(header);
-        }
+        if (!body.CanRead)
+            return;
+        using var reader = new StreamReader(body, 
+            Encoding.UTF8, false, leaveOpen: true);
+        string message = await reader.ReadToEndAsync();
+        _logger.LogInformation(message);
+        body.Position = 0;
     }
 }

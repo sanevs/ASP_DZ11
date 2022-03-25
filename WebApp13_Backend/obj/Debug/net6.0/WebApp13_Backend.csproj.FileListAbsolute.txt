@@ -75,3 +75,10 @@ D:\Mystat домашка\ASP\ASP_KW3\ASP_KW3\WebApp13_Backend\bin\Debug\net6.0\S
 D:\Mystat домашка\ASP\ASP_KW3\ASP_KW3\WebApp13_Backend\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 D:\Mystat домашка\ASP\ASP_KW3\ASP_KW3\WebApp13_Backend\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
 D:\Mystat домашка\ASP\ASP_KW3\ASP_KW3\WebApp13_Backend\obj\Debug\net6.0\WebApp13_Backend.MvcApplicationPartsAssemblyInfo.cs
+D:\Mystat домашка\ASP\ASP_KW3\ASP_KW3\WebApp13_Backend\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\Mystat домашка\ASP\ASP_KW3\ASP_KW3\WebApp13_Backend\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\Mystat домашка\ASP\ASP_KW3\ASP_KW3\WebApp13_Backend\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
+D:\Mystat домашка\ASP\ASP_KW3\ASP_KW3\WebApp13_Backend\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
+D:\Mystat домашка\ASP\ASP_KW3\ASP_KW3\WebApp13_Backend\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\Mystat домашка\ASP\ASP_KW3\ASP_KW3\WebApp13_Backend\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
+D:\Mystat домашка\ASP\ASP_KW3\ASP_KW3\WebApp13_Backend\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll

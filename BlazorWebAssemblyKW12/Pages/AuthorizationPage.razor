@@ -14,9 +14,14 @@
     Почта: <InputText @bind-Value="_addFormModel.Email"></InputText><br/>
     Пароль: <InputText @bind-Value="_addFormModel.Password"></InputText><br/>
     <br/>
+    <select @bind="Role">
+        <option>user</option>
+        <option>admin</option>
+    </select>
+    <br/>
     <input type="submit" value="Войти"/>
 </EditForm>
-@if (_account != null && _account.Id != 0)
+@if (_account != null && _account.Name != "")
 {
     <p>Hi, @_account?.Name!</p>
 }
@@ -27,17 +32,18 @@ else if (_isPushed)
 
 
 @code {
-    private AccountRequestDTO _addFormModel = new();
-    private AccountDTO? _account = null;
+    private readonly AccountRequestDTO _addFormModel = new();
+    private AccountDTO? _account;
     private bool _isPushed = false;
-    
+    private string? Role { get; set; }
+
     private async Task AuthorizeValidAccount()
     {
         _account = await _client.Authorize(
             new AccountRequestDTO(
                 _addFormModel.Name,
                 _addFormModel.Email,
-                _addFormModel.Password));
+                _addFormModel.Password), Role);
         _isPushed = true;
     }
 

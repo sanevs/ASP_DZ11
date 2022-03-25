@@ -1,6 +1,9 @@
 using Glory.Domain;
 using Microsoft.AspNet.Identity;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.HttpLogging;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
 using WebApp13_Backend;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -8,6 +11,32 @@ var builder = WebApplication.CreateBuilder(args);
 string dbPath = "kw13.db";
 builder.Services.AddDbContext<ModelDbContext>(
     options => options.UseSqlite($"Data Source={dbPath}"));
+JwtConfig jwtConfig = builder.Configuration
+    .GetSection("JwtConfig")
+    .Get<JwtConfig>();
+builder.Services.AddAuthentication(options =>
+    {
+        options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+        options.DefaultSignInScheme = JwtBearerDefaults.AuthenticationScheme;
+        options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+    })
+    .AddJwtBearer(options =>
+    {
+        options.TokenValidationParameters = new TokenValidationParameters
+        {
+            IssuerSigningKey = new SymmetricSecurityKey(jwtConfig.SigningKeyBytes),
+            ValidateIssuerSigningKey = true,
+            ValidateLifetime = true,
+            RequireExpirationTime = true,
+            RequireSignedTokens = true,
+          
+            ValidateAudience = true,
+            ValidateIssuer = true,
+            ValidAudiences = new[] { jwtConfig.Audience },
+            ValidIssuer = jwtConfig.Issuer
+        };
+    });
+builder.Services.AddAuthorization();
 
 builder.Services.AddScoped(typeof(IRepository<ProductDTO>), typeof(EfRepository<ProductDTO>));
 
@@ -18,6 +47,7 @@ builder.Services.AddScoped<ICartRepository, CartRepository>();
 builder.Services.AddScoped<CartService>();
 
 builder.Services.AddScoped<IAccountRepository, AccountRepository>();
+builder.Services.AddSingleton(jwtConfig);
 builder.Services.AddScoped<AccountService>();
 
 builder.Services.AddSingleton<IPasswordHasher, PasswordHasher>();
@@ -28,19 +58,13 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-var app = builder.Build();
+builder.Services.AddHttpLogging(option =>
+    option.LoggingFields = HttpLoggingFields.ResponseHeaders | 
+                           HttpLoggingFields.RequestHeaders | 
+                           HttpLoggingFields.RequestBody |
+                           HttpLoggingFields.ResponseBody);
 
-app.Use(async (context, next) =>
-{
-    if (context.Request.Headers.UserAgent.Any( s => s.Contains("Edg")))
-    {
-        await next();
-    }
-    else
-    {
-        await context.Response.WriteAsync("Error browser");
-    }
-});
+var app = builder.Build();
 
 app.MapControllers();
 app.UseCors(policy => policy
@@ -56,6 +80,23 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseMiddleware<BackMiddleware>();
+app.UseHttpLogging();
+
+app.UseAuthentication();
+app.UseAuthorization();
+
+app.Use(async (context, next) =>
+{
+    if (context.Request.Headers["sec-ch-ua"]
+        .Any( s => s.Contains("Edge") || s.Contains("Chrome")))
+    {
+        await next();
+    }
+    else
+    {
+        await context.Response.WriteAsync("Error browser");
+    }
+});
 
 //app.MapGet("/products", async (CatalogService service) => 
 //    await service.GetAll());

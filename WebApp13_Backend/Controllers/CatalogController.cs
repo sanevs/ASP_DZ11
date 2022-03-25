@@ -20,8 +20,8 @@ public class CatalogController : ControllerBase
     public async Task<IList<ProductDTO>> GetAll()
     {
         var products = await _service.GetAll();
-        foreach (var product in products)
-            _logger.LogInformation(product.Name + " / " + product.Price);
+        // foreach (var product in products)
+        //     _logger.LogInformation(product.Name + " / " + product.Price);
         return products;
     }
 

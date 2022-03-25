@@ -14,14 +14,17 @@
         </p>
     }
 }
+@if(_accounts?.Count == 0)
+{
+    <h4>Раздел только для администраторов!</h4>
+}
 
 @code {
     private IList<AccountDTO>? _accounts;
-    protected override async void OnInitialized()
+    protected override async Task OnInitializedAsync()
     {
         await base.OnInitializedAsync();
         _accounts = await _client.GetAccounts();
         await InvokeAsync(StateHasChanged);
     }
-
 }
