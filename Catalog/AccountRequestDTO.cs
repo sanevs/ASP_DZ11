@@ -12,11 +12,13 @@ public class AccountRequestDTO
     
     [Required, PasswordPropertyText]
     public string Password { get; set; }
+    public string Role { get; set; }
 
-    public AccountRequestDTO(string name = "", string email = "", string password = "")
+    public AccountRequestDTO(string name = "", string email = "", string password = "", string role = "")
     {
         Name = name;
         Email = email;
         Password = password;
+        Role = role;
     }
 }

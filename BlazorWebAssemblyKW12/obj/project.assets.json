@@ -2,6 +2,18 @@
   "version": 3,
   "targets": {
     "net6.0": {
+      "Blazored.LocalStorage/4.2.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Components.Web": "6.0.0"
+        },
+        "compile": {
+          "lib/net6.0/Blazored.LocalStorage.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/Blazored.LocalStorage.dll": {}
+        }
+      },
       "Microsoft.AspNet.Identity.Core/2.2.3": {
         "type": "package",
         "compile": {
@@ -508,6 +520,18 @@
       }
     },
     "net6.0/browser-wasm": {
+      "Blazored.LocalStorage/4.2.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Components.Web": "6.0.0"
+        },
+        "compile": {
+          "lib/net6.0/Blazored.LocalStorage.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/Blazored.LocalStorage.dll": {}
+        }
+      },
       "Microsoft.AspNet.Identity.Core/2.2.3": {
         "type": "package",
         "compile": {
@@ -1009,6 +1033,21 @@
     }
   },
   "libraries": {
+    "Blazored.LocalStorage/4.2.0": {
+      "sha512": "cn6h0QrLw0AIwkx/LiogtBycBFHIeqT/ptXIt871/07qTCvIGXCQZpc1s38wpmTfYLvpha5+5yn6TvIaY9ziyg==",
+      "type": "package",
+      "path": "blazored.localstorage/4.2.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "blazored.localstorage.4.2.0.nupkg.sha512",
+        "blazored.localstorage.nuspec",
+        "icon.png",
+        "lib/net5.0/Blazored.LocalStorage.dll",
+        "lib/net6.0/Blazored.LocalStorage.dll",
+        "lib/netstandard2.1/Blazored.LocalStorage.dll"
+      ]
+    },
     "Microsoft.AspNet.Identity.Core/2.2.3": {
       "sha512": "Mv5FpoaxspE8hlWLE4r1IdZtovg/OyFgVRhxQbx47J4sqdLImN1hnM1lnwCj+/wLmqtqFk/RYMoZ5GAcwm/00g==",
       "type": "package",
@@ -1897,6 +1936,7 @@
   },
   "projectFileDependencyGroups": {
     "net6.0": [
+      "Blazored.LocalStorage >= 4.2.0",
       "Catalog >= 1.0.0",
       "Microsoft.AspNetCore.Components.WebAssembly >= 6.0.1",
       "Microsoft.AspNetCore.Components.WebAssembly.DevServer >= 6.0.1",
@@ -1950,6 +1990,10 @@
       "net6.0": {
         "targetAlias": "net6.0",
         "dependencies": {
+          "Blazored.LocalStorage": {
+            "target": "Package",
+            "version": "[4.2.0, )"
+          },
           "Microsoft.AspNetCore.Components.WebAssembly": {
             "target": "Package",
             "version": "[6.0.1, )"

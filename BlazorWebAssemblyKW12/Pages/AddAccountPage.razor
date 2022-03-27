@@ -14,16 +14,29 @@
     Почта: <InputText @bind-Value="_addFormModel.Email"></InputText><br/>
     Пароль: <InputText @bind-Value="_addFormModel.Password"></InputText><br/>
     <br/>
+    <select @bind="Role">
+        <option>user</option>
+        <option>admin</option>
+    </select>
+    <br/>
     <input type="submit" value="Добавить"/>
 </EditForm>
 
 @code {
     private AccountRequestDTO _addFormModel = new();
-    
-    private async void AddValidAccount() =>
+    private string? Role { get; set; }
+
+    private async void AddValidAccount()
+    {
+        if (Role is null)
+            Role = "user";
+
         await _client.AddAccount(
             new AccountRequestDTO(
-                _addFormModel.Name, 
-                _addFormModel.Email, 
-                _addFormModel.Password));
+                _addFormModel.Name,
+                _addFormModel.Email,
+                _addFormModel.Password, 
+                Role));
+    }
+
 }

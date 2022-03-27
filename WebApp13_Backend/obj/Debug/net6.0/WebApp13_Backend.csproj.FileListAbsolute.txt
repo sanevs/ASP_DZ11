@@ -82,3 +82,4 @@ D:\Mystat домашка\ASP\ASP_KW3\ASP_KW3\WebApp13_Backend\bin\Debug\net6.0\M
 D:\Mystat домашка\ASP\ASP_KW3\ASP_KW3\WebApp13_Backend\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 D:\Mystat домашка\ASP\ASP_KW3\ASP_KW3\WebApp13_Backend\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
 D:\Mystat домашка\ASP\ASP_KW3\ASP_KW3\WebApp13_Backend\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
+D:\Mystat домашка\ASP\ASP_KW3\ASP_KW3\WebApp13_Backend\bin\Debug\net6.0\Blazored.LocalStorage.dll

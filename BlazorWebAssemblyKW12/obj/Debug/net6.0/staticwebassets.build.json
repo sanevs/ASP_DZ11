@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "NJ5iYO4gpCcm7md1adEKwmLbbphLglQXXWonmvDFXZE=",
+  "Hash": "6GvKbTAL5N8ibtLUV3qgxIesdg8UCpJ+YtM6yyQ0RDo=",
   "Source": "BlazorWebAssemblyKW12",
   "BasePath": "/",
   "Mode": "Root",
@@ -49,6 +49,23 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\Влад\\.nuget\\packages\\microsoft.aspnetcore.components.webassembly\\6.0.1\\build\\net6.0\\blazor.webassembly.js"
+    },
+    {
+      "Identity": "D:\\Mystat домашка\\ASP\\ASP_KW3\\ASP_KW3\\BlazorWebAssemblyKW12\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Blazored.LocalStorage.dll",
+      "SourceId": "BlazorWebAssemblyKW12",
+      "SourceType": "Computed",
+      "ContentRoot": "D:\\Mystat домашка\\ASP\\ASP_KW3\\ASP_KW3\\BlazorWebAssemblyKW12\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Blazored.LocalStorage.dll",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "BlazorWebAssemblyResource",
+      "AssetTraitValue": "runtime",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\Влад\\.nuget\\packages\\blazored.localstorage\\4.2.0\\lib\\net6.0\\Blazored.LocalStorage.dll"
     },
     {
       "Identity": "D:\\Mystat домашка\\ASP\\ASP_KW3\\ASP_KW3\\BlazorWebAssemblyKW12\\bin\\Debug\\net6.0\\wwwroot\\_framework\\BlazorWebAssemblyKW12.dll",
@@ -4622,6 +4639,23 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "D:\\Mystat домашка\\ASP\\ASP_KW3\\ASP_KW3\\BlazorWebAssemblyKW12\\bin\\Debug\\net6.0\\wwwroot\\_framework\\System.Linq.Parallel.dll"
+    },
+    {
+      "Identity": "D:\\Mystat домашка\\ASP\\ASP_KW3\\ASP_KW3\\BlazorWebAssemblyKW12\\obj\\Debug\\net6.0\\build-gz\\e2U8JuhP.gz",
+      "SourceId": "BlazorWebAssemblyKW12",
+      "SourceType": "Computed",
+      "ContentRoot": "D:\\Mystat домашка\\ASP\\ASP_KW3\\ASP_KW3\\BlazorWebAssemblyKW12\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Blazored.LocalStorage.dll.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "D:\\Mystat домашка\\ASP\\ASP_KW3\\ASP_KW3\\BlazorWebAssemblyKW12\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Blazored.LocalStorage.dll",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "D:\\Mystat домашка\\ASP\\ASP_KW3\\ASP_KW3\\BlazorWebAssemblyKW12\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Blazored.LocalStorage.dll"
     },
     {
       "Identity": "D:\\Mystat домашка\\ASP\\ASP_KW3\\ASP_KW3\\BlazorWebAssemblyKW12\\obj\\Debug\\net6.0\\build-gz\\e94C3qiP.gz",

@@ -1,3 +1,4 @@
+using Blazored.LocalStorage;
 using Glory.Domain;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNetCore.Authentication.JwtBearer;

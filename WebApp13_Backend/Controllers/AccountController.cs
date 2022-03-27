@@ -14,7 +14,6 @@ public class AccountController : ControllerBase
 {
     private readonly AccountService _service;
     private readonly ILogger<AccountController> _logger;
-    private static string? _role;
 
     public AccountController(AccountService service, ILogger<AccountController> logger)
     {
@@ -22,18 +21,16 @@ public class AccountController : ControllerBase
         _logger = logger;
     }
 
-    [HttpGet("all")]
-    public async Task<ActionResult<IList<AccountDTO>>> GetAll()
+    [Authorize(Roles = "admin"), HttpGet("all")]
+    public async Task<ActionResult<IList<AccountDTO>>> GetAll() => Ok(await _service.GetAll());
+
+    [Authorize, HttpGet("getAccount")]
+    public async Task<AccountDTO?> GetCurrentAccount()
     {
-        var claim = User.Claims.FirstOrDefault(it => it?.Type == "userRole");
-        if (claim == null || claim.Value != "admin")
-            return Ok(new List<AccountDTO>());
-        var accounts = await _service.GetAll();
-        // foreach (var account in accounts)
-        //     _logger.LogInformation(account.Name + " / " + account.Email);
-        return Ok(accounts);
+        var claim = User.Claims.FirstOrDefault(it => it?.Type == ClaimTypes.NameIdentifier);
+        return await _service.FindAccountById(int.Parse(claim.Value));
     }
-    
+
     [HttpPost("addAccount")]
     public async Task<ActionResult> AddAccount([FromServices] IPasswordHasher hasher, AccountRequestDTO account)
     {
@@ -42,16 +39,10 @@ public class AccountController : ControllerBase
         return Ok();
     }
 
-    [HttpPost("addRole")]
-    public async Task<ActionResult> AddRole([FromBody] string? role)
-    {
-        _role = role;
-        return Ok();
-    }
     [HttpPost("Authorize")]
-    public async Task<ActionResult<string>> Authorize([FromServices] IPasswordHasher hasher, AccountRequestDTO account)
+    public async Task<ActionResult<string?>> Authorize([FromServices] IPasswordHasher hasher, AccountRequestDTO account)
     {
-        var accountResult = await _service.AuthorizeUser(hasher, account, _role);
+        var accountResult = await _service.AuthorizeUser(hasher, account);
         if (accountResult.account == null || accountResult.token == null)
         {
             _logger.LogWarning("Unauthorized access, wrong login or password");   
@@ -60,16 +51,4 @@ public class AccountController : ControllerBase
         _logger.LogInformation($"User {accountResult.account.Name}({accountResult.account.Email}) entered!");
         return Ok(accountResult.account.Name + "/" + accountResult.token);
     }
-
-    [HttpGet("getAccount")]
-    public async Task<AccountDTO?> GetCurrentAccount()
-    {
-        var claim = User.Claims.FirstOrDefault(it => it?.Type == "account");
-        if (claim == null)
-        {
-            return await Task.FromResult(new AccountDTO());
-        }
-        return await Task.FromResult(JsonSerializer.Deserialize<AccountDTO>(claim.Value)!);
-    }
-    
 }

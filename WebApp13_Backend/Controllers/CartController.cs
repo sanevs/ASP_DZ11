@@ -1,4 +1,5 @@
 using Glory.Domain;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace WebApp13_Backend;
@@ -15,14 +16,14 @@ public class CartController : ControllerBase
         _logger = logger;
     }
 
-    [HttpPost("addToCart")]
+    [Authorize, HttpPost("addToCart")]
     public async Task AddToCart(ProductDTO product)
     {
         await _service.Add(product);
         _logger.LogInformation("Product is added to cart");
     }
 
-    [HttpPost("deleteFromCart")]
+    [Authorize, HttpPost("deleteFromCart")]
     public async Task DeleteProduct(ProductDTO product)
     {
         await _service.Delete(product);

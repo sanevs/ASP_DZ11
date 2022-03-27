@@ -8,6 +8,7 @@
     ".NETCoreApp,Version=v6.0": {
       "WebApp13_Backend/1.0.0": {
         "dependencies": {
+          "Blazored.LocalStorage": "4.2.0",
           "Catalog": "1.0.0",
           "EntityFramework": "6.4.0",
           "Microsoft.AspNetCore.Authentication.JwtBearer": "6.0.3",
@@ -19,6 +20,17 @@
         },
         "runtime": {
           "WebApp13_Backend.dll": {}
+        }
+      },
+      "Blazored.LocalStorage/4.2.0": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Components.Web": "6.0.0"
+        },
+        "runtime": {
+          "lib/net6.0/Blazored.LocalStorage.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "EntityFramework/6.4.0": {
@@ -67,6 +79,35 @@
           }
         }
       },
+      "Microsoft.AspNetCore.Authorization/6.0.0": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Metadata": "6.0.0",
+          "Microsoft.Extensions.Logging.Abstractions": "6.0.0",
+          "Microsoft.Extensions.Options": "6.0.0"
+        }
+      },
+      "Microsoft.AspNetCore.Components/6.0.0": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Authorization": "6.0.0",
+          "Microsoft.AspNetCore.Components.Analyzers": "6.0.0"
+        }
+      },
+      "Microsoft.AspNetCore.Components.Analyzers/6.0.0": {},
+      "Microsoft.AspNetCore.Components.Forms/6.0.0": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Components": "6.0.0"
+        }
+      },
+      "Microsoft.AspNetCore.Components.Web/6.0.0": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Components": "6.0.0",
+          "Microsoft.AspNetCore.Components.Forms": "6.0.0",
+          "Microsoft.Extensions.DependencyInjection": "6.0.0",
+          "Microsoft.JSInterop": "6.0.0",
+          "System.IO.Pipelines": "6.0.0"
+        }
+      },
+      "Microsoft.AspNetCore.Metadata/6.0.0": {},
       "Microsoft.CSharp/4.7.0": {},
       "Microsoft.Data.Sqlite.Core/6.0.2": {
         "dependencies": {
@@ -273,6 +314,7 @@
           }
         }
       },
+      "Microsoft.JSInterop/6.0.0": {},
       "Microsoft.NETCore.Platforms/3.1.0": {},
       "Microsoft.OpenApi/1.2.3": {
         "runtime": {
@@ -590,6 +632,7 @@
           }
         }
       },
+      "System.IO.Pipelines/6.0.0": {},
       "System.Memory/4.5.4": {},
       "System.Runtime.CompilerServices.Unsafe/6.0.0": {},
       "System.Security.AccessControl/4.7.0": {
@@ -674,6 +717,13 @@
       "serviceable": false,
       "sha512": ""
     },
+    "Blazored.LocalStorage/4.2.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-cn6h0QrLw0AIwkx/LiogtBycBFHIeqT/ptXIt871/07qTCvIGXCQZpc1s38wpmTfYLvpha5+5yn6TvIaY9ziyg==",
+      "path": "blazored.localstorage/4.2.0",
+      "hashPath": "blazored.localstorage.4.2.0.nupkg.sha512"
+    },
     "EntityFramework/6.4.0": {
       "type": "package",
       "serviceable": true,
@@ -701,6 +751,48 @@
       "sha512": "sha512-yXadCTYfe0AhgVZxLhG4ltra1BhteDumot2YRtQLOpJIVIPzanNsbFjeXomXiWWiU8qWNrK++gGYox3DaJBThg==",
       "path": "microsoft.aspnetcore.authentication.jwtbearer/6.0.3",
       "hashPath": "microsoft.aspnetcore.authentication.jwtbearer.6.0.3.nupkg.sha512"
+    },
+    "Microsoft.AspNetCore.Authorization/6.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-HPEhmNwINXzGVWirzmvVxx5/GkoaQJC7vKNIbhOUTzgnRHEf2zO6S2s4lMw3TPFWBGcAlfn6Ta0cVB9f15QC8w==",
+      "path": "microsoft.aspnetcore.authorization/6.0.0",
+      "hashPath": "microsoft.aspnetcore.authorization.6.0.0.nupkg.sha512"
+    },
+    "Microsoft.AspNetCore.Components/6.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ETks/RMYyiC91P89jL9XNEwTeYlpyzt2+Z584v70h+B9//BO0cc68gAlhz3E0v/9h4NqCSHbTlopvMvj0qxnEg==",
+      "path": "microsoft.aspnetcore.components/6.0.0",
+      "hashPath": "microsoft.aspnetcore.components.6.0.0.nupkg.sha512"
+    },
+    "Microsoft.AspNetCore.Components.Analyzers/6.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-2cpebhhUAJXYgvrePJNXzhJfM5u6MAIuu4Nho6LEjQliMtAQ6NcdtYxkezoFxqTrgT1fZR0CSYAxp7k41q6PVQ==",
+      "path": "microsoft.aspnetcore.components.analyzers/6.0.0",
+      "hashPath": "microsoft.aspnetcore.components.analyzers.6.0.0.nupkg.sha512"
+    },
+    "Microsoft.AspNetCore.Components.Forms/6.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-POjep/9qy79PD/q/5Gai7Xsg6Oybmo10+bVsCkoTrfu1kAO8dWgbQgJWH8I/VMfOPZY/dPgfo+BitqEriWMuKQ==",
+      "path": "microsoft.aspnetcore.components.forms/6.0.0",
+      "hashPath": "microsoft.aspnetcore.components.forms.6.0.0.nupkg.sha512"
+    },
+    "Microsoft.AspNetCore.Components.Web/6.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-EvTZEhXCqcIxEs01ScF0ts/CyMOzXQIFfcgwTeLae7dQV7WnPEFhqrlD+1l78lA/h+Uer1RvaRbkAScGE/0tyQ==",
+      "path": "microsoft.aspnetcore.components.web/6.0.0",
+      "hashPath": "microsoft.aspnetcore.components.web.6.0.0.nupkg.sha512"
+    },
+    "Microsoft.AspNetCore.Metadata/6.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-giBCvjANLIOqC+DJ84zCkCQnE4ebRTrgVyBe5e0gG3/F8GYzdqSSdtMSAvbOkBQsf0F8dySBPSM59vX6ksOeQg==",
+      "path": "microsoft.aspnetcore.metadata/6.0.0",
+      "hashPath": "microsoft.aspnetcore.metadata.6.0.0.nupkg.sha512"
     },
     "Microsoft.CSharp/4.7.0": {
       "type": "package",
@@ -877,6 +969,13 @@
       "path": "microsoft.identitymodel.tokens/6.16.0",
       "hashPath": "microsoft.identitymodel.tokens.6.16.0.nupkg.sha512"
     },
+    "Microsoft.JSInterop/6.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-M7NyTgOY0vhozRtppvxUDJblgPWBUg6ioJ2vpaKpXVYILB0No8Vrv4HPis+ig5BzaOWd3PR9D3oTovYKGBt3mw==",
+      "path": "microsoft.jsinterop/6.0.0",
+      "hashPath": "microsoft.jsinterop.6.0.0.nupkg.sha512"
+    },
     "Microsoft.NETCore.Platforms/3.1.0": {
       "type": "package",
       "serviceable": true,
@@ -1051,6 +1150,13 @@
       "sha512": "sha512-QnZUawkmLkzEhwgvlqcm2YNAoRgz27zVY+2LzMBMWMcfFhl2Sv8aavZOeuFMofmYJsST9h7BilOn7MzFSUMihQ==",
       "path": "system.identitymodel.tokens.jwt/6.16.0",
       "hashPath": "system.identitymodel.tokens.jwt.6.16.0.nupkg.sha512"
+    },
+    "System.IO.Pipelines/6.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-mXX66shZ4xLlI3vNLaJ0lt8OIZdmXTvIqXRdQX5HLVGSkLhINLsVhyZuX2UdRFnOGkqnwmMUs40pIIQ7mna4+A==",
+      "path": "system.io.pipelines/6.0.0",
+      "hashPath": "system.io.pipelines.6.0.0.nupkg.sha512"
     },
     "System.Memory/4.5.4": {
       "type": "package",

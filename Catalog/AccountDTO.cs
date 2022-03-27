@@ -17,12 +17,14 @@ public class AccountDTO
     
     [Required]
     public string HashedPassword { get; set; }
+    public string Role { get; set; }
 
-    public AccountDTO(int id = 0, string name = "", string email = "", string hashedPassword = "")
+    public AccountDTO(int id = 0, string name = "", string email = "", string hashedPassword = "", string role = "")
     {
         Id = id;
         Name = name;
         Email = email;
         HashedPassword = hashedPassword;
+        Role = role;
     }
 }

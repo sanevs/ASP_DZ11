@@ -849,3 +849,7 @@ D:\Mystat домашка\ASP\ASP_KW3\ASP_KW3\BlazorWebAssemblyKW12\bin\Debug\net
 D:\Mystat домашка\ASP\ASP_KW3\ASP_KW3\BlazorWebAssemblyKW12\bin\Debug\net6.0\wwwroot\_framework\Microsoft.AspNet.Identity.Core.dll.gz
 D:\Mystat домашка\ASP\ASP_KW3\ASP_KW3\BlazorWebAssemblyKW12\bin\Debug\net6.0\Microsoft.AspNet.Identity.Core.dll
 D:\Mystat домашка\ASP\ASP_KW3\ASP_KW3\BlazorWebAssemblyKW12\obj\Debug\net6.0\build-gz\LGQIC3PQ.gz
+D:\Mystat домашка\ASP\ASP_KW3\ASP_KW3\BlazorWebAssemblyKW12\bin\Debug\net6.0\wwwroot\_framework\Blazored.LocalStorage.dll
+D:\Mystat домашка\ASP\ASP_KW3\ASP_KW3\BlazorWebAssemblyKW12\bin\Debug\net6.0\wwwroot\_framework\Blazored.LocalStorage.dll.gz
+D:\Mystat домашка\ASP\ASP_KW3\ASP_KW3\BlazorWebAssemblyKW12\bin\Debug\net6.0\Blazored.LocalStorage.dll
+D:\Mystat домашка\ASP\ASP_KW3\ASP_KW3\BlazorWebAssemblyKW12\obj\Debug\net6.0\build-gz\e2U8JuhP.gz

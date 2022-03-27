@@ -1,8 +1,11 @@
 @page "/AccountsPage"
 @using ShopClient
 @using Glory.Domain
+@using BlazorWebAssemblyKW12.Data;
 
 @inject ClientDTO _client;
+
+@inherits AppComponentBase;
 
 <h3>Accounts</h3>
 @if (_accounts != null)
@@ -14,7 +17,7 @@
         </p>
     }
 }
-@if(_accounts?.Count == 0)
+else
 {
     <h4>Раздел только для администраторов!</h4>
 }
@@ -24,7 +27,11 @@
     protected override async Task OnInitializedAsync()
     {
         await base.OnInitializedAsync();
-        _accounts = await _client.GetAccounts();
+        try
+        {
+            _accounts = await _client.GetAccounts();
+        }
+        catch (HttpRequestException){}
         await InvokeAsync(StateHasChanged);
     }
 }

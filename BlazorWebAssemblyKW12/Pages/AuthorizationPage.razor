@@ -2,8 +2,12 @@
 @using ShopClient
 @using Microsoft.AspNetCore.Components
 @using Glory.Domain
+@using BlazorWebAssemblyKW12.Data;
 
 @inject ClientDTO _client;
+@inject NavigationManager _navigation;
+
+@inherits AppComponentBase;
 
 <h3>Authorization</h3>
 
@@ -14,39 +18,39 @@
     Почта: <InputText @bind-Value="_addFormModel.Email"></InputText><br/>
     Пароль: <InputText @bind-Value="_addFormModel.Password"></InputText><br/>
     <br/>
-    <select @bind="Role">
-        <option>user</option>
-        <option>admin</option>
-    </select>
-    <br/>
     <input type="submit" value="Войти"/>
 </EditForm>
-@if (_account != null && _account.Name != "")
+
+@if (!string.IsNullOrEmpty(_name))
 {
-    <p>Hi, @_account?.Name!</p>
+    <p>Hi, @_name !</p>
 }
 else if (_isPushed)
 {
     <p>Error 401: Unauthorized</p>
 }
 
-
 @code {
     private readonly AccountRequestDTO _addFormModel = new();
-    private AccountDTO? _account;
-    private bool _isPushed = false;
-    private string? Role { get; set; }
+    private string? _name;
+    private bool _isPushed;
 
     private async Task AuthorizeValidAccount()
     {
-        if (Role is null)
-            Role = "user";
-        _account = await _client.Authorize(
+        var _response = await _client.Authorize(
             new AccountRequestDTO(
                 _addFormModel.Name,
                 _addFormModel.Email,
-                _addFormModel.Password), Role);
+                _addFormModel.Password));
         _isPushed = true;
-    }
 
+        if (_response is not null && _response.Length != 0)
+        {
+            var name_token = _response.Split('/');
+            _name = name_token[0];
+            await SetToken(name_token[1]);
+            _navigation.NavigateTo("MyAccount");
+        }
+    }
+    
 }

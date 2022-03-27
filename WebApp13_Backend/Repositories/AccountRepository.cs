@@ -23,7 +23,8 @@ public class AccountRepository : IAccountRepository
             0, 
             accountRequest.Name, 
             accountRequest.Email, 
-            hasher.HashPassword(accountRequest.Password));
+            hasher.HashPassword(accountRequest.Password),
+            accountRequest.Role);
         await _context.Accounts.AddAsync(account);
         await _context.SaveChangesAsync();
     }

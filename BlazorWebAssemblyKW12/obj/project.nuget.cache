@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "pveEEDKKtTOEF3xXo8fW6q/yg0h17buysTYcy+Xa0CuzSSZ2lKrQVyEr6t0hc9D8LUvrW1p0CUVpKG6cGBovYA==",
+  "dgSpecHash": "721GPOk8cOp6AO5sezsqUSH4D41ctxQNfeyIwBfr7fo/dbo/mxdVsk8KFt7NP9/z6c/5nweHvSEgVPmNUvAuGA==",
   "success": true,
   "projectFilePath": "D:\\Mystat домашка\\ASP\\ASP_KW3\\ASP_KW3\\BlazorWebAssemblyKW12\\BlazorWebAssemblyKW12.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Влад\\.nuget\\packages\\blazored.localstorage\\4.2.0\\blazored.localstorage.4.2.0.nupkg.sha512",
     "C:\\Users\\Влад\\.nuget\\packages\\microsoft.aspnet.identity.core\\2.2.3\\microsoft.aspnet.identity.core.2.2.3.nupkg.sha512",
     "C:\\Users\\Влад\\.nuget\\packages\\microsoft.aspnetcore.authorization\\6.0.1\\microsoft.aspnetcore.authorization.6.0.1.nupkg.sha512",
     "C:\\Users\\Влад\\.nuget\\packages\\microsoft.aspnetcore.components\\6.0.1\\microsoft.aspnetcore.components.6.0.1.nupkg.sha512",

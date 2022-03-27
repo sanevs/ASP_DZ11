@@ -1,12 +1,15 @@
 @page "/MyAccount"
 @using ShopClient
 @using Glory.Domain
+@using BlazorWebAssemblyKW12.Data;
 
 @inject ClientDTO _client;
 
+@inherits AppComponentBase;
+
 <h3>My Account</h3>
 
-@if (_account == null || _account.Id == 0)
+@if (_account == null)
 {
     <h4>Раздел только для пользователей, войдите в систему!</h4>
 }
@@ -19,6 +22,7 @@ else
         Id: @_account.Id
         Email: @_account.Email
     </h5> 
+    @*<button @onclick="async () => await Logout()">Выйти</button>*@
 }
 
 @code {
@@ -27,7 +31,11 @@ else
     protected override async Task OnInitializedAsync()
     {
         await base.OnInitializedAsync();
-        _account = await _client.GetAccount();
+        try
+        {
+            _account = await _client.GetAccount();
+        }
+        catch (HttpRequestException){}
         await InvokeAsync(StateHasChanged);
     }
 

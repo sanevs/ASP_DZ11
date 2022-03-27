@@ -1,4 +1,5 @@
 using System.IdentityModel.Tokens.Jwt;
+using System.Reflection.Metadata.Ecma335;
 using System.Security.Claims;
 using Glory.Domain;
 using Microsoft.AspNet.Identity;
@@ -22,7 +23,7 @@ public class AccountService
         await _account.AddUser(hasher, account);
 
     public async Task<(AccountDTO? account, string token)> AuthorizeUser(
-        IPasswordHasher hasher, AccountRequestDTO accountRequest, string? role)
+        IPasswordHasher hasher, AccountRequestDTO accountRequest)
     {
         var accounts = await GetAll();
         var account = accounts?.First(a => a.Email == accountRequest.Email);
@@ -30,18 +31,22 @@ public class AccountService
             hasher.VerifyHashedPassword(account.HashedPassword, accountRequest.Password) ==
             PasswordVerificationResult.Success)
         {
-            return (account, GenerateToken(account, role));
+            return (account, GenerateToken(account.Id.ToString(), account.Role));
         }
         return (new AccountDTO(), string.Empty);
     }
 
-    public string GenerateToken(AccountDTO? account, string? role)
+    public async Task<AccountDTO?> FindAccountById(int id) => 
+        (await GetAll()).FirstOrDefault(a => a.Id == id);
+
+    public string GenerateToken(string id, string role)
     {
         var tokenDescriptor = new SecurityTokenDescriptor
         { 
             Subject = new ClaimsIdentity(new[]
             {
-                new Claim(JwtRegisteredClaimNames.Sub, account.Id.ToString()),
+                new Claim(ClaimTypes.NameIdentifier, id),
+                new Claim(ClaimTypes.Role, role)
             }),
             Expires = DateTime.UtcNow.Add(_jwtConfig.LifeTime),
             Audience = _jwtConfig.Audience,
@@ -49,12 +54,7 @@ public class AccountService
             SigningCredentials = new SigningCredentials(
                 new SymmetricSecurityKey(_jwtConfig.SigningKeyBytes),
                 SecurityAlgorithms.HmacSha256Signature
-            ),
-            Claims = new Dictionary<string, object?>()
-            {
-                {"userRole", role},
-                {"account", account},
-            }, 
+            )
         };
         var tokenHandler = new JwtSecurityTokenHandler();
         var token = tokenHandler.CreateToken(tokenDescriptor);
