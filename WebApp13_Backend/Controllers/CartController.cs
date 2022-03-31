@@ -1,10 +1,11 @@
+using System.Security.Claims;
 using Glory.Domain;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace WebApp13_Backend;
 
-[Route("cart"), ApiController]
+[Route("cart"), ApiController, Authorize]
 public class CartController : ControllerBase
 {
     private readonly CartService _service;
@@ -16,17 +17,27 @@ public class CartController : ControllerBase
         _logger = logger;
     }
 
-    [Authorize, HttpPost("addToCart")]
+    [HttpGet("getCartProducts")]
+    public async Task<IList<ProductDTO>?> GetCartProducts() => 
+        await _service.GetCartProducts(GetUserId());
+
+    [HttpPost("addToCart")]
     public async Task AddToCart(ProductDTO product)
     {
-        await _service.Add(product);
+        await _service.Add(GetUserId(), product);
         _logger.LogInformation("Product is added to cart");
     }
 
-    [Authorize, HttpPost("deleteFromCart")]
+    [HttpPost("deleteFromCart")]
     public async Task DeleteProduct(ProductDTO product)
     {
-        await _service.Delete(product);
+        await _service.Delete(GetUserId(), product);
         _logger.LogInformation("Product is deleted from cart");
+    }
+
+    private Guid GetUserId()
+    {
+        var claim = User.Claims.FirstOrDefault(it => it?.Type == ClaimTypes.NameIdentifier)?.Value;
+        return Guid.Parse(claim);
     }
 }

@@ -1,11 +1,8 @@
-using System.Reflection.Metadata.Ecma335;
 using System.Security.Claims;
-using System.Text.Json;
 using Glory.Domain;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.IdentityModel.JsonWebTokens;
 
 namespace WebApp13_Backend;
 
@@ -28,7 +25,7 @@ public class AccountController : ControllerBase
     public async Task<AccountDTO?> GetCurrentAccount()
     {
         var claim = User.Claims.FirstOrDefault(it => it?.Type == ClaimTypes.NameIdentifier);
-        return await _service.FindAccountById(int.Parse(claim.Value));
+        return await _service.FindAccountById(Guid.Parse(claim.Value));
     }
 
     [HttpPost("addAccount")]

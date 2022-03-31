@@ -6,5 +6,5 @@ namespace WebApp13_Backend;
 public interface IAccountRepository
 {
     Task<IList<AccountDTO>> GetAll();
-    Task AddUser(IPasswordHasher hasher, AccountRequestDTO accountRequest);
+    Task<Guid> AddUser(IPasswordHasher hasher, AccountRequestDTO accountRequest);
 }

@@ -2,7 +2,10 @@ using Glory.Domain;
 
 namespace WebApp13_Backend;
 
-public interface ICartRepository : IRepository<ProductDTO>
+public interface ICartRepository
 {
-    Task Delete(ProductDTO product);
+    Task<IList<CartItem>?> GetCartItems(Guid accountId);
+    Task CreateCart(Guid accountId);
+    Task Add(Guid accountId, ProductDTO product);
+    Task Delete(Guid accountId, ProductDTO product);
 }

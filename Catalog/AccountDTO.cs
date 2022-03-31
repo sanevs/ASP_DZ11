@@ -6,7 +6,7 @@ namespace Glory.Domain;
 public class AccountDTO
 {
     [Required]
-    public int Id { get; set; }
+    public Guid Id { get; set; }
     
     [Required]
     [MinLength(1)]
@@ -19,7 +19,7 @@ public class AccountDTO
     public string HashedPassword { get; set; }
     public string Role { get; set; }
 
-    public AccountDTO(int id = 0, string name = "", string email = "", string hashedPassword = "", string role = "")
+    public AccountDTO(Guid id, string name = "", string email = "", string hashedPassword = "", string role = "")
     {
         Id = id;
         Name = name;

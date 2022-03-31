@@ -12,7 +12,7 @@ builder.RootComponents.Add<App>("#app");
 builder.RootComponents.Add<HeadOutlet>("head::after");
 
 builder.Services.AddSingleton<ICatalog, Catalog>();
-builder.Services.AddSingleton<ICart, Cart>();
+//builder.Services.AddSingleton<ICart, BlazorWebAssemblyKW12.Data.Cart>();
 builder.Services.AddSingleton<Categories>();
 
 builder.Services.AddSingleton(new ClientDTO("http://localhost:5194", new ()));

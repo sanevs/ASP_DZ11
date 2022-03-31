@@ -17,16 +17,18 @@ public class AccountRepository : IAccountRepository
     public async Task<IList<AccountDTO>> GetAll()=> 
         await _context.Accounts.ToListAsync();
 
-    public async Task AddUser(IPasswordHasher hasher, AccountRequestDTO accountRequest)
+    public async Task<Guid> AddUser(IPasswordHasher hasher, AccountRequestDTO accountRequest)
     {
+        Guid guid = Guid.NewGuid();
         AccountDTO account = new AccountDTO(
-            0, 
+            guid, 
             accountRequest.Name, 
             accountRequest.Email, 
             hasher.HashPassword(accountRequest.Password),
             accountRequest.Role);
         await _context.Accounts.AddAsync(account);
-        await _context.SaveChangesAsync();
+        return guid;
+        //await _context.SaveChangesAsync();
     }
 
 }

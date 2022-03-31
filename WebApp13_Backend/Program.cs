@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.HttpLogging;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using WebApp13_Backend;
+using WebApp13_Backend.UoW;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -50,6 +51,8 @@ builder.Services.AddScoped<CartService>();
 builder.Services.AddScoped<IAccountRepository, AccountRepository>();
 builder.Services.AddSingleton(jwtConfig);
 builder.Services.AddScoped<AccountService>();
+
+builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 
 builder.Services.AddSingleton<IPasswordHasher, PasswordHasher>();
 

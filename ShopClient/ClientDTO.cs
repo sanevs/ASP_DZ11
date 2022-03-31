@@ -35,6 +35,9 @@ public class ClientDTO
         return await message.Content.ReadAsStringAsync();
     }
 
+    public async Task<IList<ProductDTO>?> GetCartProducts() => 
+        await _client.GetFromJsonAsync<IList<ProductDTO>?>($"{_uri}/cart/getCartProducts");
+
     public Task AddToCart(ProductDTO product) => 
         _client.PostAsJsonAsync($"{_uri}/cart/addToCart", product);
     

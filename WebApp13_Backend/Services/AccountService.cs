@@ -4,23 +4,28 @@ using System.Security.Claims;
 using Glory.Domain;
 using Microsoft.AspNet.Identity;
 using Microsoft.IdentityModel.Tokens;
+using WebApp13_Backend.UoW;
 
 namespace WebApp13_Backend;
 
 public class AccountService
 {
-    private readonly IAccountRepository _account;
+    private readonly IUnitOfWork _uow;
     private readonly JwtConfig _jwtConfig;
 
-    public AccountService(IAccountRepository account, JwtConfig jwtConfig)
+    public AccountService(IUnitOfWork uow, JwtConfig jwtConfig)
     {
-        _account = account;
+        _uow = uow;
         _jwtConfig = jwtConfig;
     }
 
-    public async Task<IList<AccountDTO>> GetAll() => await _account.GetAll();
-    public async Task AddUser(IPasswordHasher hasher, AccountRequestDTO account) => 
-        await _account.AddUser(hasher, account);
+    public async Task<IList<AccountDTO>> GetAll() => await _uow.AccountRepository.GetAll();
+    public async Task AddUser(IPasswordHasher hasher, AccountRequestDTO account)
+    {
+        var addedUserId = await _uow.AccountRepository.AddUser(hasher, account);
+        await _uow.CartRepository.CreateCart(addedUserId);
+        await _uow.SaveChangesAsync();
+    }
 
     public async Task<(AccountDTO? account, string token)> AuthorizeUser(
         IPasswordHasher hasher, AccountRequestDTO accountRequest)
@@ -33,13 +38,13 @@ public class AccountService
         {
             return (account, GenerateToken(account.Id.ToString(), account.Role));
         }
-        return (new AccountDTO(), string.Empty);
+        return (new AccountDTO(Guid.Empty), string.Empty);
     }
 
-    public async Task<AccountDTO?> FindAccountById(int id) => 
+    public async Task<AccountDTO?> FindAccountById(Guid id) => 
         (await GetAll()).FirstOrDefault(a => a.Id == id);
 
-    public string GenerateToken(string id, string role)
+    private string GenerateToken(string id, string role)
     {
         var tokenDescriptor = new SecurityTokenDescriptor
         { 

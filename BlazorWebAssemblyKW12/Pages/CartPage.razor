@@ -9,6 +9,8 @@
 @using ShopClient
 @inject ClientDTO _productsClientDto;
 
+@inherits AppComponentBase;
+
 <h3>Cart</h3>
 @* <p>Кол-во продуктов в корзине: @_cart.GetCount()</p> *@
 @* <button class="btn-danger" @onclick="() => _cart.Clear()">Очистить</button> *@
@@ -35,6 +37,10 @@
         </button>
     }
 }
+else
+{
+    <h4>Раздел только для пользователей, войдите в систему!</h4>
+}
 
 
 @code {
@@ -44,9 +50,11 @@
     protected override async Task OnInitializedAsync()
     {
         await base.OnInitializedAsync();
-        _cart = (await _productsClientDto.GetProducts())
-            ?.Where(p => p.Quantity > 0)
-            .ToList();
+        try
+        {
+            _cart = await _productsClientDto.GetCartProducts();
+        }
+        catch (HttpRequestException){}
         await InvokeAsync(StateHasChanged);
     }
 
