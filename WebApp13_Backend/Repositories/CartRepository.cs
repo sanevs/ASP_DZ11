@@ -20,7 +20,7 @@ public class CartRepository : ICartRepository
         return _context.CartItems.Where(i => i.CartId == cart.Id).ToList();
     }
 
-    public async Task Add(Guid accountId, ProductDTO product)
+    public Task Add(Guid accountId, ProductDTO product)
     {
         var cart = _context.Carts.FirstOrDefault(c => c.AccountId == accountId);
         var existedItem = GetExistItem(cart.Id, product.Id);
@@ -32,6 +32,7 @@ public class CartRepository : ICartRepository
         {
             _context.CartItems.Add(new CartItem(cart.Id, product.Id));
         }
+        return Task.CompletedTask;
     }
 
     public async Task Delete(Guid accountId, ProductDTO product)

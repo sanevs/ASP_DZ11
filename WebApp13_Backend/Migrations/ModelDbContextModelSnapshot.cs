@@ -98,6 +98,23 @@ namespace WebApp13_Backend.Migrations
 
                     b.ToTable("Products");
                 });
+
+            modelBuilder.Entity("Glory.Domain.TwoFA", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("TEXT");
+
+                    b.Property<Guid>("AccountId")
+                        .HasColumnType("TEXT");
+
+                    b.Property<int>("Code")
+                        .HasColumnType("INTEGER");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Codes");
+                });
 #pragma warning restore 612, 618
         }
     }

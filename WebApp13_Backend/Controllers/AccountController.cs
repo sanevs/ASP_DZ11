@@ -11,11 +11,13 @@ public class AccountController : ControllerBase
 {
     private readonly AccountService _service;
     private readonly ILogger<AccountController> _logger;
+    private readonly IPasswordHasher _hasher;
 
-    public AccountController(AccountService service, ILogger<AccountController> logger)
+    public AccountController(AccountService service, ILogger<AccountController> logger, IPasswordHasher hasher)
     {
         _service = service;
         _logger = logger;
+        _hasher = hasher;
     }
 
     [Authorize(Roles = "admin"), HttpGet("all")]
@@ -29,17 +31,26 @@ public class AccountController : ControllerBase
     }
 
     [HttpPost("addAccount")]
-    public async Task<ActionResult> AddAccount([FromServices] IPasswordHasher hasher, AccountRequestDTO account)
+    public async Task<ActionResult> AddAccount(AccountRequestDTO account)
     {
-        await _service.AddUser(hasher, account);
+        await _service.AddUser(_hasher, account);
         _logger.LogInformation("User added");
         return Ok();
     }
 
-    [HttpPost("Authorize")]
-    public async Task<ActionResult<string?>> Authorize([FromServices] IPasswordHasher hasher, AccountRequestDTO account)
+    [HttpPost("AuthorizeByPassword")]
+    public async Task<ActionResult<string?>> AuthorizeByPassword(AccountRequestDTO account)
     {
-        var accountResult = await _service.AuthorizeUser(hasher, account);
+        var idCode = await _service.AuthorizeByPassword(_hasher, account);
+        if (idCode.Item1 == Guid.Empty)
+            return Unauthorized();
+        _logger.LogWarning(idCode.Item2.ToString());
+        return Ok(idCode.Item1.ToString());
+    }
+    [HttpPost("AuthorizeByCode")]
+    public async Task<ActionResult<string?>> AuthorizeByCode(TwoFA code)
+    {
+        var accountResult = await _service.AuthorizeByCode(_hasher, code.Id);
         if (accountResult.account == null || accountResult.token == null)
         {
             _logger.LogWarning("Unauthorized access, wrong login or password");   
@@ -48,4 +59,5 @@ public class AccountController : ControllerBase
         _logger.LogInformation($"User {accountResult.account.Name}({accountResult.account.Email}) entered!");
         return Ok(accountResult.account.Name + "/" + accountResult.token);
     }
+    
 }

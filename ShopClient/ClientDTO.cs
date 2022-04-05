@@ -29,9 +29,14 @@ public class ClientDTO
     public Task AddAccount(AccountRequestDTO accountRequest) => 
         _client.PostAsJsonAsync($"{_uri}/accounts/addAccount", accountRequest);
 
-    public async Task<string?> Authorize(AccountRequestDTO accountRequest)
+    public async Task<string?> AuthorizeByPassword(AccountRequestDTO accountRequest)
     {
-        var message = await _client.PostAsJsonAsync($"{_uri}/accounts/Authorize", accountRequest);
+        var message = await _client.PostAsJsonAsync($"{_uri}/accounts/AuthorizeByPassword", accountRequest);
+        return await message.Content.ReadAsStringAsync();
+    }
+    public async Task<string?> AuthorizeByCode(TwoFA code)
+    {
+        var message = await _client.PostAsJsonAsync($"{_uri}/accounts/AuthorizeByCode", code);
         return await message.Content.ReadAsStringAsync();
     }
 

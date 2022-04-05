@@ -27,14 +27,31 @@ public class AccountService
         await _uow.SaveChangesAsync();
     }
 
-    public async Task<(AccountDTO? account, string token)> AuthorizeUser(
-        IPasswordHasher hasher, AccountRequestDTO accountRequest)
+    private Task<int> GenerateCode() => Task.FromResult(new Random().Next(100_000, 1_000_000));
+
+    public async Task<(Guid, int?)> AuthorizeByPassword(IPasswordHasher hasher, AccountRequestDTO accountRequest)
     {
         var accounts = await GetAll();
         var account = accounts?.First(a => a.Email == accountRequest.Email);
         if (account != null &&
             hasher.VerifyHashedPassword(account.HashedPassword, accountRequest.Password) ==
             PasswordVerificationResult.Success)
+        {
+            var guid = Guid.NewGuid();
+            var code = await GenerateCode();
+            await _uow.AccountRepository.AddCode(guid, account.Id, code);
+            await _uow.SaveChangesAsync();
+            return (guid, code);
+        }
+
+        return (Guid.Empty, 0);
+    }
+    public async Task<(AccountDTO? account, string token)> AuthorizeByCode(
+        IPasswordHasher hasher, Guid codeId)
+    {
+        var userId = await _uow.AccountRepository.GetUserId(codeId);
+        var account = await FindAccountById(userId);
+        if (account is not null)
         {
             return (account, GenerateToken(account.Id.ToString(), account.Role));
         }
