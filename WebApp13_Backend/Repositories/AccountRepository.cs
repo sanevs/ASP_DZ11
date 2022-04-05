@@ -34,6 +34,6 @@ public class AccountRepository : IAccountRepository
     public async Task AddCode(Guid id, Guid accountId, int code) => 
         await _context.Codes.AddAsync(new TwoFA(id, accountId, code));
 
-    public async Task<Guid> GetUserId(Guid codeId) => 
-        _context.Codes.FirstOrDefault(c => c.Id == codeId).AccountId;
+    public async Task<Guid> GetUserId(Guid codeId, int code) => 
+        _context.Codes.FirstOrDefault(c => c.Id == codeId && c.Code == code)!.AccountId;
 }

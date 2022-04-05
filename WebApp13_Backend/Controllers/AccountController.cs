@@ -50,14 +50,18 @@ public class AccountController : ControllerBase
     [HttpPost("AuthorizeByCode")]
     public async Task<ActionResult<string?>> AuthorizeByCode(TwoFA code)
     {
-        var accountResult = await _service.AuthorizeByCode(_hasher, code.Id);
-        if (accountResult.account == null || accountResult.token == null)
+        
+        try
         {
-            _logger.LogWarning("Unauthorized access, wrong login or password");   
+           var accountResult = await _service.AuthorizeByCode(_hasher, code.Id, code.Code);
+           _logger.LogInformation($"User {accountResult.account.Name}({accountResult.account.Email}) entered!");
+            return Ok(accountResult.account.Name + "/" + accountResult.token);
+        }
+        catch (Exception e)
+        {
+            _logger.LogWarning("Unauthorized access, wrong login, password or key code");   
             return Unauthorized();
         }
-        _logger.LogInformation($"User {accountResult.account.Name}({accountResult.account.Email}) entered!");
-        return Ok(accountResult.account.Name + "/" + accountResult.token);
     }
     
 }

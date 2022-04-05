@@ -47,9 +47,9 @@ public class AccountService
         return (Guid.Empty, 0);
     }
     public async Task<(AccountDTO? account, string token)> AuthorizeByCode(
-        IPasswordHasher hasher, Guid codeId)
+        IPasswordHasher hasher, Guid codeId, int code)
     {
-        var userId = await _uow.AccountRepository.GetUserId(codeId);
+        var userId = await _uow.AccountRepository.GetUserId(codeId, code);
         var account = await FindAccountById(userId);
         if (account is not null)
         {

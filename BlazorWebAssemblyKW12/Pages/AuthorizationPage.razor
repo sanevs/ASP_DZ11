@@ -23,7 +23,7 @@
 
 @if (!string.IsNullOrEmpty(_codeId))
 {
-    <h4>@_codeId</h4>
+    @*<h4>@_codeId</h4>*@
     <EditForm Model="_codeInput" OnValidSubmit="AuthorizeByCodeValidAccount">
         <DataAnnotationsValidator/>
         <ValidationSummary/>
@@ -43,6 +43,10 @@ else if (string.IsNullOrEmpty(_codeId) && _isPushed)
 {
     <p>Error 401: Unauthorized</p>
 }
+@if(_isErrorCode)
+{
+    <p>Wrong code</p>
+}
 
 @code {
     private readonly AccountRequestDTO _addFormModel = new();
@@ -50,6 +54,7 @@ else if (string.IsNullOrEmpty(_codeId) && _isPushed)
     private string? _codeId;
     private string _codeInput = "";
     private bool _isPushed;
+    private bool _isErrorCode;
 
     private async Task AuthorizeByPasswordValidAccount()
     {
@@ -59,22 +64,29 @@ else if (string.IsNullOrEmpty(_codeId) && _isPushed)
                 _addFormModel.Email,
                 _addFormModel.Password));
         _isPushed = true;
+        if (_codeId.Contains("Unauthorize"))
+        {
+            _codeId = "";
+        }
     }
 
     private async Task AuthorizeByCodeValidAccount()
     {
-        var response = await _client.AuthorizeByCode(
-            new TwoFA(Guid.Parse(_codeInput), Guid.Empty, 0));
-        if (response is not null && response.Length != 0)
+        try
         {
-            try
-            {
-                var name_token = response.Split('/');
-                _name = name_token[0];
-                await SetToken(name_token[1]);
-                _navigation.NavigateTo("MyAccount");
-            }
-            catch (HttpRequestException){}
+            var response = await _client.AuthorizeByCode(
+                new TwoFA(Guid.Parse(_codeId), Guid.Empty, int.Parse(_codeInput)));
+            var name_token = response.Split('/');
+            _name = name_token[0];
+            await SetToken(name_token[1]);
+            _navigation.NavigateTo("MyAccount");
+        }
+        catch (HttpRequestException)
+        {
+        }
+        catch (Exception)
+        {
+            _isErrorCode = true;
         }
     }
 }
