@@ -18,7 +18,7 @@ public class BackMiddleware
     {
         _logger.LogInformation("Request {r}", context.Request.Headers);
         _logger.LogInformation("Response {r}", context.Response.Headers);
-
+    
         context.Request.EnableBuffering();
         LogBody(context.Request.Body);
         LogBody(context.Response.Body);

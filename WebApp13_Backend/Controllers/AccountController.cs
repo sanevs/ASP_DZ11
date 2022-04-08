@@ -42,26 +42,14 @@ public class AccountController : ControllerBase
     public async Task<ActionResult<string?>> AuthorizeByPassword(AccountRequestDTO account)
     {
         var idCode = await _service.AuthorizeByPassword(_hasher, account);
-        if (idCode.Item1 == Guid.Empty)
-            return Unauthorized();
         _logger.LogWarning(idCode.Item2.ToString());
         return Ok(idCode.Item1.ToString());
     }
     [HttpPost("AuthorizeByCode")]
     public async Task<ActionResult<string?>> AuthorizeByCode(TwoFA code)
     {
-        
-        try
-        {
-           var accountResult = await _service.AuthorizeByCode(_hasher, code.Id, code.Code);
-           _logger.LogInformation($"User {accountResult.account.Name}({accountResult.account.Email}) entered!");
-            return Ok(accountResult.account.Name + "/" + accountResult.token);
-        }
-        catch (Exception e)
-        {
-            _logger.LogWarning("Unauthorized access, wrong login, password or key code");   
-            return Unauthorized();
-        }
+       var accountResult = await _service.AuthorizeByCode(code.Id, code.Code);
+       _logger.LogInformation($"User {accountResult.account?.Name}({accountResult.account?.Email}) entered!");
+        return Ok(accountResult.token);
     }
-    
 }

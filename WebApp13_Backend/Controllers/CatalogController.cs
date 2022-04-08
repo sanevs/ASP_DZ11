@@ -1,6 +1,7 @@
 using System.Reflection.Metadata.Ecma335;
 using Glory.Domain;
 using Microsoft.AspNetCore.Mvc;
+using WebApp13_Backend.MVC_Filters;
 
 namespace WebApp13_Backend;
 
@@ -16,7 +17,7 @@ public class CatalogController : ControllerBase
         _logger = logger;
     }
 
-    [HttpGet("products")]
+    [HttpGet("products"), MyActionFilter]
     public async Task<IList<ProductDTO>> GetAll()
     {
         var products = await _service.GetAll();

@@ -23,70 +23,55 @@
 
 @if (!string.IsNullOrEmpty(_codeId))
 {
-    @*<h4>@_codeId</h4>*@
     <EditForm Model="_codeInput" OnValidSubmit="AuthorizeByCodeValidAccount">
-        <DataAnnotationsValidator/>
-        <ValidationSummary/>
+        @* <DataAnnotationsValidator/> *@
+        @* <ValidationSummary/> *@
         
-        Код: <InputText @bind-Value="_codeInput"></InputText><br/>
+        Код: <InputNumber @bind-Value="_codeInput"></InputNumber><br/>
         <br/>
         <input type="submit" value="Подтвердить"/>
     </EditForm>
     
 }
 
-@if (!string.IsNullOrEmpty(_name))
+@if (!string.IsNullOrEmpty(_message))
 {
-    <p>Hi, @_name !</p>
-}
-else if (string.IsNullOrEmpty(_codeId) && _isPushed)
-{
-    <p>Error 401: Unauthorized</p>
-}
-@if(_isErrorCode)
-{
-    <p>Wrong code</p>
+    <h4>@_message</h4> 
 }
 
 @code {
     private readonly AccountRequestDTO _addFormModel = new();
-    private string? _name;
     private string? _codeId;
-    private string _codeInput = "";
-    private bool _isPushed;
-    private bool _isErrorCode;
+    private int _codeInput;
+    private string _message;
 
     private async Task AuthorizeByPasswordValidAccount()
     {
+        _message = "";
         _codeId = await _client.AuthorizeByPassword(
             new AccountRequestDTO(
                 _addFormModel.Name,
                 _addFormModel.Email,
                 _addFormModel.Password));
-        _isPushed = true;
-        if (_codeId.Contains("Unauthorize"))
+        if (_codeId.Contains("message"))
         {
-            _codeId = "";
+            _message = _codeId;
+            _codeId = null;
         }
     }
 
     private async Task AuthorizeByCodeValidAccount()
     {
-        try
+        _message = "";
+        var token = await _client.AuthorizeByCode(
+            new TwoFA(Guid.Parse(_codeId), Guid.Empty, _codeInput));
+        if (token!.Contains("message"))
         {
-            var response = await _client.AuthorizeByCode(
-                new TwoFA(Guid.Parse(_codeId), Guid.Empty, int.Parse(_codeInput)));
-            var name_token = response.Split('/');
-            _name = name_token[0];
-            await SetToken(name_token[1]);
-            _navigation.NavigateTo("MyAccount");
+            _message = token;
+            return;
         }
-        catch (HttpRequestException)
-        {
-        }
-        catch (Exception)
-        {
-            _isErrorCode = true;
-        }
+        
+        await SetToken(token);
+        _navigation.NavigateTo("MyAccount");
     }
 }

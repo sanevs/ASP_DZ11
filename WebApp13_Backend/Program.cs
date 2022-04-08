@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.HttpLogging;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using WebApp13_Backend;
+using WebApp13_Backend.MVC_Filters;
 using WebApp13_Backend.UoW;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -16,6 +17,13 @@ builder.Services.AddDbContext<ModelDbContext>(
 JwtConfig jwtConfig = builder.Configuration
     .GetSection("JwtConfig")
     .Get<JwtConfig>();
+
+builder.Services.AddControllers(options =>
+{
+    options.Filters.Add<MyAuthorizationFilter>();
+    options.Filters.Add<MyExceptionFilter>();
+});
+
 builder.Services.AddAuthentication(options =>
     {
         options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
@@ -62,7 +70,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-builder.Services.AddHttpLogging(option =>
+builder.Services.AddHttpLogging(option  =>
     option.LoggingFields = HttpLoggingFields.ResponseHeaders | 
                            HttpLoggingFields.RequestHeaders | 
                            HttpLoggingFields.RequestBody |

@@ -2,6 +2,7 @@ using System.IdentityModel.Tokens.Jwt;
 using System.Reflection.Metadata.Ecma335;
 using System.Security.Claims;
 using Glory.Domain;
+using Glory.Domain.Exceptions;
 using Microsoft.AspNet.Identity;
 using Microsoft.IdentityModel.Tokens;
 using WebApp13_Backend.UoW;
@@ -32,33 +33,30 @@ public class AccountService
     public async Task<(Guid, int?)> AuthorizeByPassword(IPasswordHasher hasher, AccountRequestDTO accountRequest)
     {
         var accounts = await GetAll();
-        var account = accounts?.First(a => a.Email == accountRequest.Email);
-        if (account != null &&
-            hasher.VerifyHashedPassword(account.HashedPassword, accountRequest.Password) ==
-            PasswordVerificationResult.Success)
-        {
-            var guid = Guid.NewGuid();
-            var code = await GenerateCode();
-            await _uow.AccountRepository.AddCode(guid, account.Id, code);
-            await _uow.SaveChangesAsync();
-            return (guid, code);
-        }
+        var account = accounts.FirstOrDefault(a => a.Email == accountRequest.Email);
+        if (account == null)
+            throw new EmailNotFoundException();
 
-        return (Guid.Empty, 0);
+        if (hasher.VerifyHashedPassword(
+                account.HashedPassword, accountRequest.Password) != PasswordVerificationResult.Success) 
+            throw new WrongPasswordException();
+        
+        var guid = Guid.NewGuid();
+        var code = await GenerateCode();
+        await _uow.AccountRepository.AddCode(guid, account.Id, code);
+        await _uow.SaveChangesAsync();
+        return (guid, code);
     }
-    public async Task<(AccountDTO? account, string token)> AuthorizeByCode(
-        IPasswordHasher hasher, Guid codeId, int code)
+    public async Task<(AccountDTO? account, string token)> AuthorizeByCode(Guid codeId, int code)
     {
         var userId = await _uow.AccountRepository.GetUserId(codeId, code);
         var account = await FindAccountById(userId);
-        if (account is not null)
-        {
-            return (account, GenerateToken(account.Id.ToString(), account.Role));
-        }
-        return (new AccountDTO(Guid.Empty), string.Empty);
+        if (account is null)
+            throw new WrongCodeException();
+        return (account, GenerateToken(account.Id.ToString(), account.Role));
     }
 
-    public async Task<AccountDTO?> FindAccountById(Guid id) => 
+    public async Task<AccountDTO?> FindAccountById(Guid? id) => 
         (await GetAll()).FirstOrDefault(a => a.Id == id);
 
     private string GenerateToken(string id, string role)

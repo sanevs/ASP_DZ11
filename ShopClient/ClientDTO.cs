@@ -1,5 +1,6 @@
 using System.Net.Http.Headers;
 using System.Net.Http.Json;
+using System.Reflection.Metadata.Ecma335;
 using Glory.Domain;
 
 namespace ShopClient;
@@ -21,8 +22,12 @@ public class ClientDTO
 
     public Task<IList<AccountDTO>?> GetAccounts() =>
         _client.GetFromJsonAsync<IList<AccountDTO>>($"{_uri}/accounts/all");
-    public Task<AccountDTO?> GetAccount() =>
-        _client.GetFromJsonAsync<AccountDTO?>($"{_uri}/accounts/getAccount");
+    public async Task<AccountDTO?> GetAccount(string key)
+    {
+        var user = await _client.GetFromJsonAsync<AccountDTO?>($"{_uri}/accounts/getAccount");
+        //await AddApiKey(key);
+        return user;
+    }
 
     public Task AddProduct(ProductDTO product) => 
         _client.PostAsJsonAsync($"{_uri}/catalog/addProduct", product);
@@ -52,4 +57,11 @@ public class ClientDTO
     public void SetToken(string token) =>
         _client.DefaultRequestHeaders.Authorization = 
             new AuthenticationHeaderValue("Bearer", token);
+
+    public Task AddApiKey(string key)
+    {
+        if(!_client.DefaultRequestHeaders.TryGetValues("apikey", out _))
+            _client.DefaultRequestHeaders.Add("apikey", key);
+        return Task.CompletedTask;
+    }
 }

@@ -33,7 +33,7 @@ else
         await base.OnInitializedAsync();
         try
         {
-            _account = await _client.GetAccount();
+            _account = await _client.GetAccount("apikey");
         }
         catch (HttpRequestException){}
         await InvokeAsync(StateHasChanged);
