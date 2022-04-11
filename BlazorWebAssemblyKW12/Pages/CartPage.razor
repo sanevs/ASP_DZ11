@@ -25,7 +25,7 @@
 @*     </p> *@
 @* } *@
 
-@if (_cart != null && _cart?.Count >= 0)
+@if (_cart != null && _cart?.Count > 0)
 {
     <button @onclick="async () => await ClearCart()">Clear cart</button><br/>
     @foreach (var product in _cart)
@@ -43,14 +43,14 @@
             @onclick="async () => await Send()">
         Chekout, send by email
     </button>
-    if (_textSend != null)
-    {
-        <h5>Order sent!</h5>
-    }
 }
-else
+else if (_cart?.Count != 0)
 {
     <h4>Раздел только для пользователей, войдите в систему!</h4>
+}
+@if (_textSend != null)
+{
+    <h5>Order sent!</h5>
 }
 
 
