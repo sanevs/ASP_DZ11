@@ -25,8 +25,9 @@
 @*     </p> *@
 @* } *@
 
-@if (_cart != null)
+@if (_cart != null && _cart?.Count >= 0)
 {
+    <button @onclick="async () => await ClearCart()">Clear cart</button><br/>
     @foreach (var product in _cart)
     {
         <ProductComponent Product="product"/>
@@ -35,6 +36,16 @@
                 @onclick="async () => await Delete(product)">
             Удалить
         </button>
+    }
+    <br/>
+    <br/>
+    <button class="btn-success"
+            @onclick="async () => await Send()">
+        Chekout, send by email
+    </button>
+    if (_textSend != null)
+    {
+        <h5>Order sent!</h5>
     }
 }
 else
@@ -47,6 +58,7 @@ else
     // private string _ref;
 
     private IList<ProductDTO>? _cart;
+    private string? _textSend;
     protected override async Task OnInitializedAsync()
     {
         await base.OnInitializedAsync();
@@ -61,6 +73,17 @@ else
     private async Task Delete(ProductDTO product)
     {
         await _productsClientDto.DeleteFromCart(product);
+        await OnInitializedAsync();
+    }
+
+    private async Task Send()
+    {
+        _textSend = await _client.SendOrder();
+        await ClearCart();
+    }
+    private async Task ClearCart()
+    {
+        await _client.ClearCart();
         await OnInitializedAsync();
     }
 }

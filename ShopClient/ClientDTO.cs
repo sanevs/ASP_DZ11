@@ -54,6 +54,19 @@ public class ClientDTO
     public Task DeleteFromCart(ProductDTO product) => 
         _client.PostAsJsonAsync($"{_uri}/cart/deleteFromCart", product);
 
+    public async Task<string?> SendOrder()
+    {
+        var account = await GetAccount("apikey");
+        var message = await _client.PostAsJsonAsync($"{_uri}/cart/sendOrder", account);
+        return await message.Content.ReadAsStringAsync();
+    }
+
+    public async Task ClearCart()
+    {
+        var account = await GetAccount("apikey");
+        await _client.PostAsJsonAsync($"{_uri}/cart/clearCart", account);
+    }
+
     public void SetToken(string token) =>
         _client.DefaultRequestHeaders.Authorization = 
             new AuthenticationHeaderValue("Bearer", token);

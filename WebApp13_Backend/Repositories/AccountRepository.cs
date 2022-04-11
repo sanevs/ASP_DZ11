@@ -22,6 +22,7 @@ public class AccountRepository : IAccountRepository
         Guid guid = Guid.NewGuid();
         AccountDTO account = new AccountDTO(
             guid, 
+            isBanned: false,
             accountRequest.Name, 
             accountRequest.Email, 
             hasher.HashPassword(accountRequest.Password),

@@ -35,6 +35,14 @@ public class CartController : ControllerBase
         _logger.LogInformation("Product is deleted from cart");
     }
 
+    [HttpPost("sendOrder")]
+    public async Task<string?> SendOrder(AccountDTO account) =>
+        await _service.SendOrderByEmail(account);
+
+    [HttpPost("clearCart")]
+    public async Task ClearCart(AccountDTO account) =>
+        await _service.Clear(account);
+
     private Guid GetUserId()
     {
         var claim = User.Claims.FirstOrDefault(it => it?.Type == ClaimTypes.NameIdentifier)?.Value;

@@ -76,6 +76,10 @@ builder.Services.AddHttpLogging(option  =>
                            HttpLoggingFields.RequestBody |
                            HttpLoggingFields.ResponseBody);
 
+var configSection = builder.Configuration.GetSection("SMTPUserData");
+builder.Services.Configure<SMTPUserData>(configSection);
+builder.Services.AddSingleton<IEmailSender, SMTPEmailSender>();
+
 var app = builder.Build();
 
 app.MapControllers();

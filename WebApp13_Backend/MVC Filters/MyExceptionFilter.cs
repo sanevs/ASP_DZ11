@@ -24,7 +24,7 @@ public class MyExceptionFilter : Attribute, IExceptionFilter
             WrongPasswordException => "Неправильный пароль",
             WrongCodeException => "Неправильный код подтверждения",
             HttpRequestException => "Ошибка http запроса",
-            Exception => "Неизвестная ошибка",
+            Exception => null
         };
         if (message != null)
         {

@@ -18,13 +18,15 @@ public class AccountDTO
     [Required]
     public string HashedPassword { get; set; }
     public string Role { get; set; }
+    public bool IsBanned { get; set; }
 
-    public AccountDTO(Guid id, string name = "", string email = "", string hashedPassword = "", string role = "")
+    public AccountDTO(Guid id, bool isBanned = false, string name = "", string email = "", string hashedPassword = "", string role = "")
     {
         Id = id;
         Name = name;
         Email = email;
         HashedPassword = hashedPassword;
         Role = role;
+        IsBanned = isBanned;
     }
 }

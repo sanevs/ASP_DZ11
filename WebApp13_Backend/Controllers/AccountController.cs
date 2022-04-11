@@ -3,6 +3,7 @@ using Glory.Domain;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using WebApp13_Backend.MVC_Filters.DI_Filters;
 
 namespace WebApp13_Backend;
 
@@ -23,7 +24,7 @@ public class AccountController : ControllerBase
     [Authorize(Roles = "admin"), HttpGet("all")]
     public async Task<ActionResult<IList<AccountDTO>>> GetAll() => Ok(await _service.GetAll());
 
-    [Authorize, HttpGet("getAccount")]
+    [Authorize, HttpGet("getAccount"), TypeFilter(typeof(CheckBanFilter))]
     public async Task<AccountDTO?> GetCurrentAccount()
     {
         var claim = User.Claims.FirstOrDefault(it => it?.Type == ClaimTypes.NameIdentifier);

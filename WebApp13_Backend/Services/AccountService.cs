@@ -59,6 +59,14 @@ public class AccountService
     public async Task<AccountDTO?> FindAccountById(Guid? id) => 
         (await GetAll()).FirstOrDefault(a => a.Id == id);
 
+    public async Task<bool> CheckBannedUser(Guid? id)
+    {
+        var account = await FindAccountById(id);
+        if(account is not null)
+            return account.IsBanned;
+        return false;
+    }
+    
     private string GenerateToken(string id, string role)
     {
         var tokenDescriptor = new SecurityTokenDescriptor

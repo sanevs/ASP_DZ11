@@ -1,10 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "ue7/0Rq/58Vnh1msq9W7Ny5dUQ/kvN6cehx2OWlhmUfCDH9qTPGrr7Y3N95jPU4ZNBhf5gbGh/D6ZEaPW2/uWg==",
+  "dgSpecHash": "ZFAcw79rvsak7FJc69sr/BA5KaDO25zHErMQfI2PA/sE682lH/XKj9sR1qSnllGZuljzrndg0X1TDUyEJI5bjA==",
   "success": true,
   "projectFilePath": "D:\\Mystat домашка\\ASP\\ASP_KW3\\ASP_KW3\\ASP_KW3\\ASP_KW3.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Влад\\.nuget\\packages\\microsoft.aspnet.identity.core\\2.2.3\\microsoft.aspnet.identity.core.2.2.3.nupkg.sha512"
+    "C:\\Users\\Влад\\.nuget\\packages\\microsoft.aspnet.identity.core\\2.2.3\\microsoft.aspnet.identity.core.2.2.3.nupkg.sha512",
+    "C:\\Users\\Влад\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\6.0.0\\microsoft.extensions.dependencyinjection.abstractions.6.0.0.nupkg.sha512",
+    "C:\\Users\\Влад\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\6.0.0\\microsoft.extensions.logging.abstractions.6.0.0.nupkg.sha512",
+    "C:\\Users\\Влад\\.nuget\\packages\\microsoft.extensions.options\\6.0.0\\microsoft.extensions.options.6.0.0.nupkg.sha512",
+    "C:\\Users\\Влад\\.nuget\\packages\\microsoft.extensions.primitives\\6.0.0\\microsoft.extensions.primitives.6.0.0.nupkg.sha512",
+    "C:\\Users\\Влад\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
   ],
   "logs": [
     {

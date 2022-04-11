@@ -1,11 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "1uFOos11KY+y6OJ08VY1hEBdGudBdCDYze95Lm2wMPRxsflIf0vYftLQ+2iDwnwSmH3Yi2MbiaKvliZxiC97ag==",
+  "dgSpecHash": "DmYVP92+ijs62ILffiBgwzW7D02bZYGmaR3eGoV7CeWPqOP62HiZh8cBaibpR1e44VNv6RF4B7WLpFjbZ29/bg==",
   "success": true,
   "projectFilePath": "D:\\Mystat домашка\\ASP\\ASP_KW3\\ASP_KW3\\ShopClient\\ShopClient.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Влад\\.nuget\\packages\\microsoft.aspnet.identity.core\\2.2.3\\microsoft.aspnet.identity.core.2.2.3.nupkg.sha512",
-    "C:\\Users\\Влад\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\6.0.0\\microsoft.extensions.logging.abstractions.6.0.0.nupkg.sha512"
+    "C:\\Users\\Влад\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\6.0.0\\microsoft.extensions.dependencyinjection.abstractions.6.0.0.nupkg.sha512",
+    "C:\\Users\\Влад\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\6.0.0\\microsoft.extensions.logging.abstractions.6.0.0.nupkg.sha512",
+    "C:\\Users\\Влад\\.nuget\\packages\\microsoft.extensions.options\\6.0.0\\microsoft.extensions.options.6.0.0.nupkg.sha512",
+    "C:\\Users\\Влад\\.nuget\\packages\\microsoft.extensions.primitives\\6.0.0\\microsoft.extensions.primitives.6.0.0.nupkg.sha512",
+    "C:\\Users\\Влад\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
   ],
   "logs": [
     {

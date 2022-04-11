@@ -20,6 +20,16 @@ public class CartRepository : ICartRepository
         return _context.CartItems.Where(i => i.CartId == cart.Id).ToList();
     }
 
+    public async Task Clear(Guid accountId)
+    {
+        var cart = _context.Carts.SingleOrDefault(c => c.AccountId == accountId);
+        if(cart is null)
+            return;
+        _context.CartItems.RemoveRange(
+            _context.CartItems.Where(i => i.CartId == cart.Id)
+            );
+    }
+    
     public Task Add(Guid accountId, ProductDTO product)
     {
         var cart = _context.Carts.FirstOrDefault(c => c.AccountId == accountId);

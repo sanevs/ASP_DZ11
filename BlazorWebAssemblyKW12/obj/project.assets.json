@@ -495,7 +495,9 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
-          "Microsoft.AspNet.Identity.Core": "2.2.3"
+          "Microsoft.AspNet.Identity.Core": "2.2.3",
+          "Microsoft.Extensions.Logging.Abstractions": "6.0.0",
+          "Microsoft.Extensions.Options": "6.0.0"
         },
         "compile": {
           "bin/placeholder/Catalog.dll": {}
@@ -1007,7 +1009,9 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
-          "Microsoft.AspNet.Identity.Core": "2.2.3"
+          "Microsoft.AspNet.Identity.Core": "2.2.3",
+          "Microsoft.Extensions.Logging.Abstractions": "6.0.0",
+          "Microsoft.Extensions.Options": "6.0.0"
         },
         "compile": {
           "bin/placeholder/Catalog.dll": {}

@@ -19,6 +19,7 @@ public class MyAuthorizationFilter : Attribute, IAuthorizationFilter
         _logger.LogInformation("MVC Filter Authorization Handler");
         var apiHeader = context.HttpContext.Request.Headers["apikey"].ToString();
         if (apiHeader == string.Empty)
-            context.Result = new UnauthorizedResult();
+            ;
+        //context.Result = new UnauthorizedResult();
     }
 }
