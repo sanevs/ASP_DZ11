@@ -96,23 +96,24 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseMiddleware<BackMiddleware>();
+app.UseMiddleware<BrowserMiddleware>();
 app.UseHttpLogging();
 
 app.UseAuthentication();
 app.UseAuthorization();
 
-app.Use(async (context, next) =>
-{
-    if (context.Request.Headers["sec-ch-ua"]
-        .Any( s => s.Contains("Edge") || s.Contains("Chrome")))
-    {
-        await next();
-    }
-    else
-    {
-        await context.Response.WriteAsync("Error browser");
-    }
-});
+// app.Use(async (context, next) =>
+// {
+//     if (context.Request.Headers["sec-ch-ua"]
+//         .Any( s => s.Contains("Edge") || s.Contains("Chrome")))
+//     {
+//         await next();
+//     }
+//     else
+//     {
+//         await context.Response.WriteAsync("Error browser");
+//     }
+// });
 
 //app.MapGet("/products", async (CatalogService service) => 
 //    await service.GetAll());

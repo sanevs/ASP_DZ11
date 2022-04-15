@@ -18,6 +18,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyProductAttribute("WebApp13_Backend")]
 [assembly: System.Reflection.AssemblyTitleAttribute("WebApp13_Backend")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
+[assembly: System.Runtime.CompilerServices.InternalsVisibleTo("BackendTest")]
 
 // Создано классом WriteCodeFragment MSBuild.
 

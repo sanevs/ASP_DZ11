@@ -22,10 +22,11 @@ public class CartController : ControllerBase
         await _service.GetCartProducts(GetUserId());
 
     [HttpPost("addToCart")]
-    public async Task AddToCart(ProductDTO product)
+    public async Task<ActionResult<string>> AddToCart(ProductDTO product)
     {
         await _service.Add(GetUserId(), product);
         _logger.LogInformation("Product is added to cart");
+        return Ok("Added");
     }
 
     [HttpPost("deleteFromCart")]
