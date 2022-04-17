@@ -31,17 +31,23 @@ public class ClientDTO
 
     public Task AddProduct(ProductDTO product) => 
         _client.PostAsJsonAsync($"{_uri}/catalog/addProduct", product);
-    public Task AddAccount(AccountRequestDTO accountRequest) => 
-        _client.PostAsJsonAsync($"{_uri}/accounts/addAccount", accountRequest);
+    public async Task<string?> AddAccount(AccountRequestDTO accountRequest)
+    {
+        var message = await _client.PostAsJsonAsync($"{_uri}/accounts/addAccount", accountRequest);
+        message.EnsureSuccessStatusCode();
+        return await message.Content.ReadAsStringAsync();
+    }
 
     public async Task<string?> AuthorizeByPassword(AccountRequestDTO accountRequest)
     {
         var message = await _client.PostAsJsonAsync($"{_uri}/accounts/AuthorizeByPassword", accountRequest);
+        message.EnsureSuccessStatusCode();
         return await message.Content.ReadAsStringAsync();
     }
     public async Task<string?> AuthorizeByCode(TwoFA code)
     {
         var message = await _client.PostAsJsonAsync($"{_uri}/accounts/AuthorizeByCode", code);
+        message.EnsureSuccessStatusCode();
         return await message.Content.ReadAsStringAsync();
     }
 

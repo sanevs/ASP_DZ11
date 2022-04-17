@@ -24,6 +24,7 @@
     </ItemGroup>
 
     <ItemGroup>
+      <ProjectReference Include="..\ShopClient\ShopClient.csproj" />
       <ProjectReference Include="..\WebApp13_Backend\WebApp13_Backend.csproj" />
     </ItemGroup>
 

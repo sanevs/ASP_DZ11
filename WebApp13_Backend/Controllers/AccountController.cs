@@ -32,11 +32,11 @@ public class AccountController : ControllerBase
     }
 
     [HttpPost("addAccount")]
-    public async Task<ActionResult> AddAccount(AccountRequestDTO account)
+    public async Task<ActionResult<string?>> AddAccount(AccountRequestDTO account)
     {
         await _service.AddUser(_hasher, account);
         _logger.LogInformation("User added");
-        return Ok();
+        return Ok($"User {account.Name} added");
     }
 
     [HttpPost("AuthorizeByPassword")]
@@ -44,7 +44,7 @@ public class AccountController : ControllerBase
     {
         var idCode = await _service.AuthorizeByPassword(_hasher, account);
         _logger.LogWarning(idCode.Item2.ToString());
-        return Ok(idCode.Item1.ToString());
+        return Ok(idCode.Item1 + "/" + idCode.Item2);
     }
     [HttpPost("AuthorizeByCode")]
     public async Task<ActionResult<string?>> AuthorizeByCode(TwoFA code)

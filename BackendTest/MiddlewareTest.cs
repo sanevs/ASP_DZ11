@@ -18,7 +18,8 @@ public class MiddlewareTest
         });
 
         var context = new DefaultHttpContext();
-        context.Request.Headers.Add("sec-ch-ua", "Edge");
+        context.Request.Headers.Add("User-Agent", "Edge");
+        context.Request.Headers.UserAgent.ToString().Contains("Edg");
 
         browserMiddleware.InvokeAsync(context);
         Assert.True(passed);
